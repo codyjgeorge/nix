@@ -1,0 +1,20 @@
+{ config, pkgs, ... }:
+
+{ 
+  imports = [
+	./hm/bash.nix
+	./hm/git.nix
+	./hm/github.nix
+	./hm/waybar.nix
+	./hm/kitty.nix
+        ./hm/hyprland.nix
+        ./hm/vesktop.nix
+  ];
+
+  home.username = "cody";
+	home.homeDirectory = "/home/cody";
+	home.stateVersion = "25.05";
+
+  xdg.enable = true;
+
+}
