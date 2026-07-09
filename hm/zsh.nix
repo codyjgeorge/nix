@@ -13,7 +13,7 @@
 
             shellAliases = {
               btw = "echo I use nixos, btw";
-              dots = "cd ~/nix"
+              dots = "cd ~/nix";
               arise = "sudo nixos-rebuild switch --flake ~/nix#nuc-nixos";
             };
 
