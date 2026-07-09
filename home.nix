@@ -13,7 +13,7 @@
 
   home.username = "cody";
 	home.homeDirectory = "/home/cody";
-	home.stateVersion = "25.05";
+	home.stateVersion = "26.05";
 
   xdg.enable = true;
 

@@ -33,7 +33,7 @@
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
-  networking.hostName = "cody";
+  networking.hostName = "Nuc";
 
   time.timeZone = "Europe/Warsaw";
 
