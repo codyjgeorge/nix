@@ -23,7 +23,6 @@
 	outputs = inputs@{ self, nixpkgs, home-manager, nvf, spicetify-nix, ... }: {
 		nixosConfigurations.nuc-nixos = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
-                        specialArgs = { inherit inputs; };
 			modules = [
 
 				./configuration.nix
@@ -34,6 +33,7 @@
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users.cody = import ./home.nix;
+                                                extraSpecialArgs = { inherit inputs; };
 						backupFileExtension = "backup";
 					};
 				}
@@ -42,9 +42,6 @@
                                 ./modules/nvf.nix
 
                                 ./modules/steam.nix
-
-                                inputs.spicetify-nix.nixosModules.default
-                                ./modules/spicetify.nix
 			];
 		};
 	};

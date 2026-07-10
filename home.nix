@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 { 
   imports = [
@@ -9,6 +9,9 @@
         ./hm/hyprland.nix
         ./hm/vesktop.nix
         ./hm/zsh.nix
+
+        inputs.spicetify-nix.nixosModules.default
+        ./hm/spicetify.nix
   ];
 
   home.username = "cody";
