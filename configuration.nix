@@ -97,8 +97,7 @@
     wayfreeze
     wl-clipboard
     kdePackages.dolphin
-    proton-vpn
-    wireguard-tools
+    curl
   ];
 
   fonts.packages = with pkgs; [
