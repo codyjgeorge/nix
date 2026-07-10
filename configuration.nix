@@ -1,35 +1,41 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   boot.loader = {
-        systemd-boot = {
-                enable = true;
-                configurationLimit = 10;
-        };
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 10;
+    };
 
-        efi.canTouchEfiVariables = true;
+    efi.canTouchEfiVariables = true;
   };
 
   nix = {
-        gc = {
-                automatic = true;
-                dates = "weekly";
-                options = "--delete-older-than 7d";
-        };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
 
-        settings = {
-               experimental-features = [ "nix-command" "flakes" ];
-               auto-optimise-store = true;
-        };
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      auto-optimise-store = true;
+    };
   };
 
   nixpkgs.config.allowUnfree = true;
-
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
@@ -38,24 +44,24 @@
   time.timeZone = "Europe/Warsaw";
 
   hardware.graphics = {
-	enable = true;
-	enable32Bit = true;
+    enable = true;
+    enable32Bit = true;
   };
 
   # Video
   services.xserver.videoDrivers = [ "modesetting" ];
   # Sound
   services.pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 
-  boot.kernelParams = [ 
-	"i915.enable_psr=0"
-	"i915.enable_fbc=0"
-	"i915.enable_dc=0"
+  boot.kernelParams = [
+    "i915.enable_psr=0"
+    "i915.enable_fbc=0"
+    "i915.enable_dc=0"
   ];
 
   services.getty.autologinUser = "cody";
@@ -82,7 +88,7 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     git
     zsh
@@ -124,4 +130,3 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-
