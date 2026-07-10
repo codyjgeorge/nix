@@ -9,14 +9,6 @@
                 enable = true;
                 wayland = true;
 
-                enabledCustomApps = with spicePkgs.apps; [
-                        marketplace
-                ];
-
-                enabledExtensions = with spicePkgs.extensions; [
-                        adblock
-                ];
-
                 theme = spicePkgs.themes.sleek;
                 colorScheme = "Eldritch";
         };
