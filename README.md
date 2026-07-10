@@ -1,4 +1,4 @@
-# My NixOS Config #
+# My NixOS Config (w/ Flakes and HomeManager) #
 
 I'm still learning NixOS and will continue to update this throughout my progression.
 
