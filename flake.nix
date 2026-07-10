@@ -42,6 +42,8 @@
                                 ./modules/nvf.nix
 
                                 ./modules/steam.nix
+
+                                ./modules/overlays.nix
 			];
 		};
 	};

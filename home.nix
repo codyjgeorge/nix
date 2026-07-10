@@ -10,7 +10,7 @@
         ./hm/vesktop.nix
         ./hm/zsh.nix
 
-        inputs.spicetify-nix.nixosModules.default
+        inputs.spicetify-nix.homeManagerModules.default
         ./hm/spicetify.nix
   ];
 
