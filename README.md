@@ -2,7 +2,7 @@
 
 I'm still learning NixOS and will continue to update this throughout my progression.
 
-### Installed: ###
+### Installed:
 
     - Hyprland  (Default)
     - Waybar    (Default)
@@ -17,7 +17,7 @@ I'm still learning NixOS and will continue to update this throughout my progress
     - Steam
     - BattleNet
 
-### TODO: ###
+### TODO:
 
     - Install Obsidian
     - Install Noctalia
