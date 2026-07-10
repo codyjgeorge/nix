@@ -35,8 +35,6 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
   networking.hostName = "Nuc";
@@ -105,6 +103,12 @@
     kdePackages.dolphin
     curl
   ];
+
+  environment.sessionVariables = {
+        QT_QPA_PLATFORM = "wayland";
+        NIXOS_OZONE_WL = "1";
+        NIXPKGS_ALLOW_UNFREE = "1";
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
