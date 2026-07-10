@@ -14,6 +14,7 @@
     ./hm/hyprland.nix
     ./hm/vesktop.nix
     ./hm/zsh.nix
+    ./hm/obsidian.nix
 
     inputs.spicetify-nix.homeManagerModules.default
     ./hm/spicetify.nix
