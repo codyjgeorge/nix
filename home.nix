@@ -2,13 +2,13 @@
 
 { 
   imports = [
-	./hm/bash.nix
 	./hm/git.nix
 	./hm/github.nix
 	./hm/waybar.nix
 	./hm/kitty.nix
         ./hm/hyprland.nix
         ./hm/vesktop.nix
+        ./hm/zsh.nix
   ];
 
   home.username = "cody";
