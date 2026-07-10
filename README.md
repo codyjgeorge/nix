@@ -14,12 +14,12 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - Firefox   (Eldritch theme)
 - Vesktop   (Default)
 - Spicetify (Sleek-Eldritch theme)
+- Obsidian  (Eldritch theme w/ plugins)
 - Steam
 - BattleNet
 
 ### TODO: ###
 
-- Install Obsidian
 - Install Noctalia
 - Install NH
 - Install Scopebuddy
