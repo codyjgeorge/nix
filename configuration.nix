@@ -34,6 +34,7 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
   networking.hostName = "Nuc";
+  networking.firewall.checkReversePath = false;
 
   time.timeZone = "Europe/Warsaw";
 
@@ -97,6 +98,8 @@
     wayfreeze
     wl-clipboard
     kdePackages.dolphin
+    proton-vpn
+    wireguard-tools
   ];
 
   fonts.packages = with pkgs; [
