@@ -7,6 +7,7 @@
         in
         {
                 enable = true;
+                wayland = true;
 
                 enabledCustomApps = with spicePkgs.apps; [
                         marketplace
