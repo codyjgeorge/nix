@@ -33,7 +33,7 @@
                 plugins = [
                     "git"
                 ];
-                theme = "robbyrussell";
+                theme = "philips";
             };
         };
 }
