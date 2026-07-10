@@ -14,7 +14,6 @@
     ./hm/hyprland.nix
     ./hm/vesktop.nix
     ./hm/zsh.nix
-    ./hm/obsidian.nix
 
     inputs.spicetify-nix.homeManagerModules.default
     ./hm/spicetify.nix
@@ -23,6 +22,9 @@
   home.username = "cody";
   home.homeDirectory = "/home/cody";
   home.stateVersion = "26.05";
+  home.packages = with pkgs; [
+        obsidian
+  ];
 
   xdg.enable = true;
 

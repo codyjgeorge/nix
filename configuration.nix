@@ -108,7 +108,6 @@
     wl-clipboard
     kdePackages.dolphin
     curl
-    obsidian
   ];
 
   environment.sessionVariables = {
