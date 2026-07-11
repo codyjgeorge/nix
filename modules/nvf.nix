@@ -15,6 +15,7 @@
                                         "precognition-nvim"
                                         "nvim-lint"
                                         "nvim-colorizer-lua"
+                                        "which-key-nvim"
                                         "dracula"
                                 ];
                                 viAlias = false;
