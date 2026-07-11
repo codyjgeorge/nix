@@ -12,7 +12,7 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - Zsh       (Prompt-simple)
 - Neovim    (NVF-Default)
 - Firefox   (Eldritch theme)
-- Vesktop   (Default)
+- Vesktop   (Eldritch theme)
 - Spicetify (Sleek-Eldritch theme)
 - Obsidian  (Eldritch theme w/ plugins)
 - Steam
@@ -25,5 +25,4 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - Install Scopebuddy
 - Config  Hyprland
 - Config  Neovim
-- Theme   Vesktop
 - Fix     Screensharing
