@@ -9,7 +9,7 @@
 			size = lib.mkDefault 14;
 		};
 		settings = {
-			background_opacity = lib.mkDefault 0.65;
+			background_opacity = lib.mkDefault 0.75;
 		};
 	};
 }
