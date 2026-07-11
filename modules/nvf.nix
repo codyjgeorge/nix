@@ -52,15 +52,9 @@
                                 };
 
                                 ui = {
-                                        noice = {
-                                                enable = true;
-                                        };
                                         colorizer = {
                                                 enable = true;
                                         };
-                                };
-                                telescope = {
-                                        enable = true;
                                 };
                         };
                 };
