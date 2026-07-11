@@ -25,7 +25,7 @@
                                 languages = {
                                         markdown = {
                                                 enable = true;
-                                                extensions.render-markdown-nvim = true;
+                                                extensions.render-markdown-nvim.enable = true;
                                                 format.enable = true;
                                         };
                                         nix = {
