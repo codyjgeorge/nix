@@ -21,6 +21,7 @@ I'm still learning NixOS and will continue to update this throughout my progress
 
 - Install NH
 - Install Scopebuddy
+- Install Greetr
 - Config  Hyprland (on-going)
 - Config  Neovim (on-going)
 - Config  Noctalia (on-going)
