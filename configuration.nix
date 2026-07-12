@@ -96,11 +96,11 @@
     wget
     git
     zsh
-    waybar
+    #waybar
     kitty
     fastfetch
     hyprpaper
-    hyprlauncher
+    #hyprlauncher
     grim
     slurp
     satty
