@@ -17,6 +17,9 @@
 
     inputs.spicetify-nix.homeManagerModules.default
     ./hm/spicetify.nix
+
+    inputs.noctalia.homeModules.default
+    ./hm/noctalia.nix
   ];
 
   home.username = "cody";
