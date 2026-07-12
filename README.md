@@ -23,4 +23,5 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - Install Scopebuddy
 - Config  Hyprland (on-going)
 - Config  Neovim (on-going)
+- Config  Noctalia (on-going)
 - Fix     Screensharing
