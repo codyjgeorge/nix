@@ -5,9 +5,8 @@ I'm still learning NixOS and will continue to update this throughout my progress
 ### Installed: ###
 
 - Hyprland  (Default)
-- Waybar    (Default)
 - Dolphin   (Default)
-- Wofi      (Default)
+- Noctalia  (Eldritch theme)
 - Kitty     (Eldritch theme)
 - Zsh       (Prompt-simple)
 - Neovim    (NVF-Default)
@@ -20,9 +19,8 @@ I'm still learning NixOS and will continue to update this throughout my progress
 
 ### TODO: ###
 
-- Install Noctalia
 - Install NH
 - Install Scopebuddy
-- Config  Hyprland
-- Config  Neovim
+- Config  Hyprland (on-going)
+- Config  Neovim (on-going)
 - Fix     Screensharing

@@ -96,11 +96,8 @@
     wget
     git
     zsh
-    #waybar
     kitty
     fastfetch
-    hyprpaper
-    #hyprlauncher
     grim
     slurp
     satty
