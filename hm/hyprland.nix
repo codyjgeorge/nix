@@ -29,6 +29,8 @@
 			    scale    = "auto",
 			})
 
+            local primary = "HDMI-A-2"
+
 
 			---------------------
 			---- MY PROGRAMS ----
@@ -49,11 +51,8 @@
 
 			-- Autostart necessary processes (like notifications daemons, status bars, etc.)
 			-- Or execute your favorite apps at launch like this:
-
 			hl.on("hyprland.start", function () 
-			--   hl.exec_cmd(terminal)
-			--   hl.exec_cmd("nm-applet")
-			hl.exec_cmd("waybar & hyprpaper")
+			    hl.exec_cmd("noctalia")
 			end)
 
 
@@ -113,7 +112,7 @@
 			    },
 
 			    decoration = {
-				rounding       = 10,
+				rounding       = 20,
 				rounding_power = 2,
 
 				-- Change transparency of focused and unfocused windows
@@ -167,25 +166,7 @@
 			hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "almostLinear", style = "fade" })
 			hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
 			hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
-
-			-- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-			-- "Smart gaps" / "No gaps when only"
-			-- uncomment all if you wish to use that.
-			-- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
-			-- hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
-			-- hl.window_rule({
-			--     name  = "no-gaps-wtv1",
-			--     match = { float = false, workspace = "w[tv1]" },
-			--     border_size = 0,
-			--     rounding    = 0,
-			-- })
-			-- hl.window_rule({
-			--     name  = "no-gaps-f1",
-			--     match = { float = false, workspace = "f[1]" },
-			--     border_size = 0,
-			--     rounding    = 0,
-			-- })
-
+			
 			-- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 			hl.config({
 			    dwindle = {
@@ -260,6 +241,7 @@
 			---------------------
 
 			local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+            local ipc = "noctalia msg "
 
 			-- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 			hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
@@ -279,6 +261,12 @@
 			hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 			hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 			hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+            -- Noctalia Core Binds
+            hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+            hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+            hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+            hl.bind("ALT + TAB", hl.dsp.exec_cmd("noctalia msg window-switcher"))
 
 			-- Switch workspaces with mainMod + [0-9]
 			-- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -308,11 +296,18 @@
 			hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
 			hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
 
-			-- Requires playerctl
+			-- Media Keys -> Requires playerctl
 			hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
 			hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 			hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 			hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+            
+            -- Noctalia Media Keys
+            hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
+            hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
+            hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
+            hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"))
+            hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"))
 
 
 			--------------------------------
@@ -373,6 +368,29 @@
 			    move  = "20 monitor_h-120",
 			    float = true,
 			})
+
+            -- Noctalia Settings
+            hl.window_rule({
+                match = { class = "dev.noctalia.Noctalia" },
+                float = true,
+                size = { 1080, 920 },
+            })
+
+            hl.workspace_rule({workspace = "1", monitor = primary, persistent = true})
+            hl.workspace_rule({workspace = "2", monitor = primary, persistent = true})
+            hl.workspace_rule({workspace = "3", monitor = primary, persistent = true})
+            hl.workspace_rule({workspace = "4", monitor = primary, persistent = true})
+            hl.workspace_rule({workspace = "5", monitor = primary, persistent = true})
+
+            hl.layer_rule({
+                name = "noctalia",
+                match = {
+                    namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd)$",
+                    no_anim = true,
+                    ignore_alpha = 0.5,
+                    blur = true,
+                    blur_popups = true,
+            })
 		'';
 	};
 }
