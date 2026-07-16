@@ -26,8 +26,12 @@
   home.stateVersion = "26.05";
   home.packages = with pkgs; [
         obsidian
+        wowup-cf
   ];
 
   xdg.enable = true;
+  xdg.mimeApps.defaultApplications = {
+    "x-scheme-handler/curseforge" = "wowup-cf.desktop";
+  };
 
 }
