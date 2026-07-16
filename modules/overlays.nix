@@ -10,7 +10,7 @@
                 owner = "neonvoidx";
                 repo = "nixpkgs";
                 rev = "spicetify-cli-fix";
-                hash = "sha256-5WoV3bNEmmbCKBSwCgH9n5x8IKwq9D5mPswzbKNtUy0=";
+                hash = "sha256-EbHtnei7167fm5ZzK3LoRdjKQhgkMpLqF9ERH04phQU=";
                 name = "source";
               } + "/pkgs/by-name/sp/spicetify-cli/package.nix"
             ) { };
