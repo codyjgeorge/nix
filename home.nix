@@ -30,8 +30,4 @@
   ];
 
   xdg.enable = true;
-  xdg.mimeApps.defaultApplications = {
-    "x-scheme-handler/curseforge" = "wowup-cf.desktop";
-  };
-
 }
