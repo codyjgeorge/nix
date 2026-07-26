@@ -3,7 +3,7 @@ let
     userPlugins = {
         eldritch-nvim = pkgs.vimUtils.buildVimPlugin {
             name = "eldritch.nvim";
-            src = inputs.eldritch-nvim
+            src = inputs.eldritch-nvim;
         };
     };
 in
@@ -23,7 +23,7 @@ in
                                         "nvim-lint"
                                         "nvim-colorizer-lua"
                                         "which-key-nvim"
-                                        "eldritch-nvim"
+                                        userPlugins."eldritch-nvim"
                                 ];
                                 viAlias = false;
                                 vimAlias = true;
