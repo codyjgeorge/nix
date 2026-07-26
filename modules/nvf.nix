@@ -62,7 +62,7 @@ in
                                         require("eldritch").setup({ transparent = true })
                                         vim.cmd.colorscheme("eldritch")
                                 '';
-                                extraLuaConfig = ''
+                                luaConfigPost = ''
                                         require("CopilotChat").setup({
                                             model = "..."
                                             window = {
