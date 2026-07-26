@@ -27,6 +27,7 @@
   home.packages = with pkgs; [
         obsidian
         wowup-cf
+        opencode
   ];
 
   xdg.enable = true;
