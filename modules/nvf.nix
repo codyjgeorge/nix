@@ -1,5 +1,12 @@
 { config, pkgs, lib, inputs, ... }:
-
+let
+    userPlugins = {
+        eldritch-nvim = pkgs.vimUtils.buildVimPlugin {
+            name = "eldritch.nvim";
+            src = inputs.eldritch-nvim
+        };
+    };
+in
 {
         programs.nvf = {
                 enable = true;
