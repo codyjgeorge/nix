@@ -4,12 +4,13 @@ I'm still learning NixOS and will continue to update this throughout my progress
 
 ### Installed: ###
 
-- Hyprland  (Default)
+- Hyprland  (Eldritch theme)
+    - Screensharing Enabled
 - Dolphin   (Default)
 - Noctalia  (Eldritch theme)
 - Kitty     (Eldritch theme)
 - Zsh       (Prompt-simple)
-- Neovim    (NVF-Default)
+- NVF(NVIM) (Eldritch theme w/ plugins)
 - Firefox   (Eldritch theme)
 - Vesktop   (Eldritch theme)
 - Spicetify (Sleek-Eldritch theme)
@@ -22,7 +23,7 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - Install NH
 - Install Scopebuddy
 - Install Greetr
+- Install Stylix
 - Config  Hyprland (on-going)
 - Config  Neovim (on-going)
 - Config  Noctalia (on-going)
-- Fix     Screensharing
