@@ -42,6 +42,7 @@
     {
       nixosConfigurations.nuc-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
 
           ./configuration.nix
@@ -59,7 +60,6 @@
 
           nvf.nixosModules.default
           ./modules/nvf.nix
-          inputs.eldritch-nvim
 
           ./modules/steam.nix
 
