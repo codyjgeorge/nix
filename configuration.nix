@@ -53,7 +53,7 @@
   };
 
   # Enable PipeWire & Wireplumber for audio/video stream routing
-  services.rtkit.enable = true;
+  securtiy.rtkit.enable = true;
   services.xserver.videoDrivers = [ "modesetting" ];
   services.pipewire = {
     enable = true;
