@@ -33,6 +33,14 @@
                                                 enable = true;
                                                 format.enable = true;
                                         };
+
+                                        clang = {
+                                                enable = true;
+                                                format.enable = true;
+                                                treesitter.enable = true;
+                                                lsp.enable = true;
+                                                dap.enable = true;
+                                        };
                                 };
                                 clipboard = {
                                         enable = true;
@@ -56,6 +64,10 @@
                                         colorizer = {
                                                 enable = true;
                                         };
+                                };
+
+                                terminal = {
+                                        toggleterm.enable = true;
                                 };
                         };
                 };
