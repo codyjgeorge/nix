@@ -25,6 +25,11 @@ in
                                         "which-key-nvim"
                                         userPlugins."eldritch-nvim"
                                 ];
+                                extraPlugins = {
+                                        copilot-chat = {
+                                                package = pkgs.vimPlugins.CopilotChat-nvim;
+                                        };
+                                };
                                 viAlias = false;
                                 vimAlias = true;
                                 lsp = {
@@ -80,6 +85,13 @@ in
                                         action = ":w<CR>:split | term g++ % -o main && ./main<CR>";
                                         silent = true;
                                         desc = "Compile and Run C++";
+                                    }
+                                    {
+                                        key = "<leader>a";
+                                        mode = ["n"];
+                                        action = "<cmd>CopilotChatToggle<CR>";
+                                        silent = true;
+                                        desc = "Toggle Copilot Chat";
                                     }
                                 ];
                         };
