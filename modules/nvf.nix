@@ -53,7 +53,7 @@ in
                                         enable = true;
                                         registers = "unnamedplus";
                                 };
-                                luaConfigRC."colorscheme" = lib.nvim.dag.entryAfter [ "startupConfigs" ] /* lua */ ''
+                                luaConfigRC."colorscheme" = inputs.nvf.lib.nvim.dag.entryAfter [ "startupConfigs" ] /* lua */ ''
                                         require("eldritch").setup({ transparent = true })
                                         vim.cmd.colorscheme("eldritch")
                                 '';
