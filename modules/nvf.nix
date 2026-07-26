@@ -46,11 +46,6 @@
                                         enable = true;
                                         registers = "unnamedplus";
                                 };
-                                theme = {
-                                        enable = true;
-                                        transparent = true;
-                                        name = "eldritch-nvim"; # "base16" for custom. requires all vim.theme.base16-colors to be set.
-                                };
                                 luaConfigRC."colorscheme" = lib.nvim.dag.entryAfter [ "startupConfigs" ] /* lua */ ''
                                         require("eldritch").setup({ transparent = true })
                                         vim.cmd.colorscheme("eldritch")
