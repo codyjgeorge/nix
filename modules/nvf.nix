@@ -73,6 +73,15 @@ in
                                 terminal = {
                                         toggleterm.enable = true;
                                 };
+                                keymaps = [
+                                    {
+                                        key = "<leader>r";
+                                        mode = ["n"];
+                                        action = ":w<CR>:split | term g++ % -o main && ./main<CR>";
+                                        silent = true;
+                                        desc = "Compile and Run C++";
+                                    }
+                                ];
                         };
                 };
         };
