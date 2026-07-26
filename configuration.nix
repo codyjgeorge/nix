@@ -52,9 +52,9 @@
     enable32Bit = true;
   };
 
-  # Video
+  # Enable PipeWire & Wireplumber for audio/video stream routing
+  services.rtkit.enable = true;
   services.xserver.videoDrivers = [ "modesetting" ];
-  # Sound
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -89,6 +89,19 @@
     xwayland.enable = true;
   };
 
+  # Configure XDG Desktop Portals specifically for Hyprland
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+        pkgs.xdg-desktop-portal-hyprland
+        pkgs.xdg-dekstop-portal-gtk
+    ];
+    config = {
+        common.default = [ "gtk" ];
+        hyprland.default = [ "hyprland" "gtk" ];
+    };
+  };
+
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
@@ -111,6 +124,8 @@
         QT_QPA_PLATFORM = "wayland";
         NIXOS_OZONE_WL = "1";
         NIXPKGS_ALLOW_UNFREE = "1";
+        XDG_CURRENT_DESKTOP = "Hyprland";
+        XDG_SESSION_TYPE = "wayland";
   };
 
   fonts.packages = with pkgs; [
