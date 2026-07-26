@@ -62,6 +62,15 @@ in
                                         require("eldritch").setup({ transparent = true })
                                         vim.cmd.colorscheme("eldritch")
                                 '';
+                                extraLuaConfig = ''
+                                        require("CopilotChat").setup({
+                                            model = "..."
+                                            window = {
+                                                layout = "vertical",
+                                                width = 0.4,
+                                            },
+                                        })
+                                '';
                                 options = {
                                         wrap = false;
                                         mouse = "a";
