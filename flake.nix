@@ -36,6 +36,7 @@
       home-manager,
       nvf,
       spicetify-nix,
+      eldritch-nvim,
       ...
     }:
     {

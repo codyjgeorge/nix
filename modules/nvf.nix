@@ -4,12 +4,7 @@
         programs.nvf = {
                 enable = true;
                 settings = {
-                        vim = { userPlugins = {
-                                        eldritch-nvim = pkgs.vimUtils.buildVimPlugin {
-                                                        name = "eldritch.nvim";
-                                                        src = inputs.eldritch-nvim;
-                                        };
-                                };
+                        vim = { 
                                 startPlugins = [
                                         "snacks-nvim"
                                         "noice-nvim"
