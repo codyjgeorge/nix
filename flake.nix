@@ -59,6 +59,7 @@
 
           nvf.nixosModules.default
           ./modules/nvf.nix
+          inputs.eldritch-nvim
 
           ./modules/steam.nix
 
