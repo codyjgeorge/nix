@@ -64,8 +64,8 @@
                                                 base08 = "#f7c67f"; #Errors/Variables
                                                 base09 = "#f265b5"; #Integers, Booleans, Constants
                                                 base0A = "#a48cf2"; #Types/Classes
-                                                base0B = "#f16c75"; #Strings
-                                                base0C = "#f1fc79"; #Regex/Escapes
+                                                base0B = "#f16c79"; #Strings
+                                                base0C = "#f1fc75"; #Regex/Escapes
                                                 base0D = "#7081d0"; #Functions/Methods
                                                 base0E = "#a48cf2"; #Keywords/Control Flow
                                                 base0F = "#f265b5"; #Delimiters/Special Tags
