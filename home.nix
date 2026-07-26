@@ -13,6 +13,8 @@
     ./hm/hyprland.nix
     ./hm/vesktop.nix
     ./hm/zsh.nix
+    ./hm/opencode.nix
+    ./hm/mcp-nixos.nix
 
     inputs.spicetify-nix.homeManagerModules.default
     ./hm/spicetify.nix
@@ -28,6 +30,7 @@
         obsidian
         wowup-cf
         opencode
+        mcp-nixos
   ];
 
   xdg.enable = true;
