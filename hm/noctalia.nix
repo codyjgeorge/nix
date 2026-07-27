@@ -8,12 +8,12 @@
             theme = {
                 mode = "dark";
                 source = "builtin";
-                builtin = "Catpuccin";
+                builtin = "Eldritch";
             };
 
             wallpaper = {
                 enable = true;
-                default.path = "./wallpapers/nixOS.png";
+                default.path = "./wallpapers/hyprland_anime.jpg";
             };
         };
     };

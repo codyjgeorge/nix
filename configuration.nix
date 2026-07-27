@@ -89,6 +89,11 @@
     xwayland.enable = true;
   };
 
+  programs.noctalia = {
+    enable = true;
+    recommendedServices.enable = true;
+  };
+
   # Configure XDG Desktop Portals specifically for Hyprland
   xdg.portal = {
     enable = true;

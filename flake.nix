@@ -25,7 +25,6 @@
 
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -64,6 +63,8 @@
           ./modules/steam.nix
 
           ./modules/overlays.nix
+
+          inputs.noctalia.nixosModules.default
         ];
       };
     };
