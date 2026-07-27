@@ -32,6 +32,47 @@
         "flakes"
       ];
       auto-optimise-store = true;
+      substituters = [
+        "https://cache.nixos.org"
+        "https://nix-community.cachix.org"
+        "https://cache.garnix.io"
+        # "https://hyprland.cachix.org"
+        "https://noctalia.cachix.org"
+      ];
+      trusted-substituters = [
+        # Official nix cache
+        "https://cache.nixos.org"
+        # Garnix
+        "https://cache.garnix.io"
+        # Nix Community Cache
+        "https://nix-community.cachix.org"
+        # hyprland cache
+        # "https://hyprland.cachix.org"
+        # Personal Cachix cache
+        # Noctalia
+        "https://noctalia.cachix.org"
+      ];
+      trusted-public-keys = [
+        # Official nix cache
+        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        # Personal Cachix cache
+        # Garnix
+        "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+        # Nix community cache
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        # hyprland cache
+        # "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        # Noctalia
+        "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+      ];
+      trusted-users = [
+        "root"
+        "@wheel"
+      ];
+      allowed-users = [
+        "root"
+        "@wheel"
+      ];
     };
   };
 
