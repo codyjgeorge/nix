@@ -8,7 +8,7 @@ I'm still learning NixOS and will continue to update this throughout my progress
     - Screensharing Enabled
 - Dolphin   (Default)
 - NH        (NixHelper)
-- Nix-Output-Module
+- Stylix    (Eldritch theme)
 - Noctalia  (Eldritch theme)
 - Kitty     (Eldritch theme)
 - Zsh       (Prompt-simple)
@@ -17,6 +17,7 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - Vesktop   (Eldritch theme)
 - Spicetify (Sleek-Eldritch theme)
 - Obsidian  (Eldritch theme w/ plugins)
+- Nix-Output-Module
 - Steam
 - BattleNet
 
@@ -24,7 +25,6 @@ I'm still learning NixOS and will continue to update this throughout my progress
 
 - Install Scopebuddy
 - Install Greetr
-- Install Stylix
 - Config  Hyprland (on-going)
 - Config  Neovim (on-going)
 - Config  Noctalia (on-going)
