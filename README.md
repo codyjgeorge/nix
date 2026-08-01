@@ -10,6 +10,7 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - NH        (NixHelper)
 - Stylix    (Eldritch theme)
 - Noctalia  (Eldritch theme)
+- Greetr    (Eldritch theme)
 - Kitty     (Eldritch theme)
 - Zsh       (Prompt-simple)
 - NVF(NVIM) (Eldritch theme w/ plugins)
@@ -24,7 +25,6 @@ I'm still learning NixOS and will continue to update this throughout my progress
 ### TODO: ###
 
 - Install Scopebuddy
-- Install Greetr
 - Config  Hyprland (on-going)
 - Config  Neovim (on-going)
 - Config  Noctalia (on-going)
