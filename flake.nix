@@ -66,14 +66,6 @@
             };
           }
 
-          {
-            environment.systemPackages = [ 
-                
-                nh.packages.${system}.default 
-
-                ];
-          }
-
           nvf.nixosModules.default
           ./modules/nvf.nix
 

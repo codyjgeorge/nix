@@ -121,18 +121,21 @@
     shell = pkgs.zsh;
   };
 
-  programs.zsh.enable = true;
+  programs = {
+        
+        zsh.enable = true;
 
-  programs.firefox.enable = true;
+        firefox.enable = true;
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+        hyprland = {
+            enable = true;
+            xwayland.enable = true;
+        };
 
-  programs.noctalia = {
-    enable = true;
-    recommendedServices.enable = true;
+        noctalia = {
+            enable = true;
+            recommendedServices.enable = true;
+        };
   };
 
   # Configure XDG Desktop Portals specifically for Hyprland
@@ -165,6 +168,9 @@
     wl-clipboard
     kdePackages.dolphin
     curl
+    nh
+    nix-output-monitor
+
   ];
 
   environment.sessionVariables = {
