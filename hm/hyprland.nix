@@ -329,7 +329,7 @@
                         hl.window_rule({
                             name = "spotify-opacity";
                             match = {
-                              class = "Spotify";
+                              class = "spotify";
                             };
 
                             opacity = "0.85 0.85";
