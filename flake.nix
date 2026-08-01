@@ -26,6 +26,11 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia";
     };
+
+    nh = {
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -36,6 +41,7 @@
       nvf,
       spicetify-nix,
       eldritch-nvim,
+      nh,
       ...
     }:
     {
@@ -57,6 +63,14 @@
             };
           }
 
+          {
+            environment.systemPackages = [ 
+                
+                nh.packages.${system}.default 
+
+                ];
+          }
+
           nvf.nixosModules.default
           ./modules/nvf.nix
 
@@ -65,6 +79,8 @@
           ./modules/overlays.nix
 
           inputs.noctalia.nixosModules.default
+
+          ./modules/nh.nix
         ];
       };
     };

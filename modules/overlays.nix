@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
       nixpkgs = {
@@ -15,6 +15,8 @@
               } + "/pkgs/by-name/sp/spicetify-cli/package.nix"
             ) { };
           })
+
+          nh.overlays.default
         ];
       };
 
