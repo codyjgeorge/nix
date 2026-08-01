@@ -17,12 +17,6 @@
               arise = "nh os switch"; 
             };
 
-            profileExtra = ''
-                if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-                        exec start-hyprland
-                fi
-            '';
-
             history.size = 10000;
             history.ignoreAllDups = true;
             history.path = "$HOME/.zsh_history";
