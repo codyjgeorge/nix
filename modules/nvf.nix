@@ -13,7 +13,6 @@ in
                 settings = {
                         vim = { 
                                 startPlugins = [
-                                        "snacks-nvim"
                                         "noice-nvim"
                                         "copilot-lua"
                                         "telescope"
@@ -64,6 +63,46 @@ in
                                         tabstop = 4;
                                         autoindent = true;
                                         shiftwidth = 4;
+                                };
+                                utility."snacks-nvim" = {
+                                    enable = true;
+                                    setupOpts.dashboard = {
+                                        width = 60;
+                                        sections = [
+                                            { section = "header"; }
+                                            {
+                                              pane = 2;
+                                              section = "terminal";
+                                              icon = " ";
+                                              title = "Git Status";
+                                              cmd = "git status --short --branch --renames";
+                                              enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
+                                              height = 5;
+                                              padding = 1;
+                                              indent = 3;
+                                              ttl = 300;
+                                            }
+                                            { section = "keys"; gap = 1; padding = 1; }
+                                            { section = "recent_files"; icon = " "; title = "Recent Files"; indent = 2; limit = 8; }
+                                            { section = "projects"; icon = " "; title = "Projects"; indent = 2; }
+                                        ];
+                                        preset = {
+                                            header = lib.mkLuaInline ''
+                                           [[██████╗ ██████╗ ██████╗ ██████╗ ███████╗
+                                            ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝
+                                            ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝ 
+                                            ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝  
+                                            ╚██████╗╚██████╔╝██████╔╝██████╔╝███████╗
+                                             ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝]]'';
+                                            keys = [
+                                                { icon = " "; key = "f"; desc = "Find File"; action = ":lua Snacks.dashboard.pick('files')"; }
+                                                { icon = " "; key = "n"; desc = "New File"; action = ":ene | startinsert"; }
+                                                { icon = " "; key = "g"; desc = "Find Text"; action = ":lua Snacks.dashboard.pick('live_grep')"; }
+                                                { icon = " "; key = "r"; desc = "Recent Files"; action = ":lua Snacks.dashboard.pick('oldfiles')"; }
+                                                { icon = " "; key = "q"; desc = "Quit"; action = ":qa"; }
+                                            ];
+                                        };
+                                    };
                                 };
                                 ui = {
                                         colorizer = {
