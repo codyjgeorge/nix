@@ -36,6 +36,11 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    noctalia-greeter = {
+        url = "github:noctalia-dev/noctalia-greeter";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -48,6 +53,7 @@
       eldritch-nvim,
       nh,
       stylix,
+      noctalia-greeter,
       ...
     }:
     let
@@ -80,6 +86,7 @@
                     ./modules/overlays.nix
 
                     inputs.noctalia.nixosModules.default
+                    inputs.noctalia-greeter.nixosModules.default
 
                     ./modules/nh.nix
 

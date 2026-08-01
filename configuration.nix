@@ -82,8 +82,6 @@
     pulse.enable = true;
   };
 
-  services.getty.autologinUser = "cody";
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cody = {
     isNormalUser = true;
