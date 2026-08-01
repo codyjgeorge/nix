@@ -11,6 +11,5 @@
 
                 theme = spicePkgs.themes.sleek;
                 colorScheme = "Eldritch";
-                windowManagerPatch = true;
         };
 }
