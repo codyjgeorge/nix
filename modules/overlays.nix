@@ -16,7 +16,7 @@
             ) { };
           })
 
-          nh.overlays.default
+          inputs.nh.overlays.default
         ];
       };
 
