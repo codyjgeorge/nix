@@ -12,13 +12,16 @@
                 name = "JetBrainsMono Nerd Font";
             };
             sansSerif = {
-                package = pkgs.nerd-fonts.jerbrains-mono;
+                package = pkgs.nerd-fonts.jetbrains-mono;
                 name = "JetBrainsMono Nerd Font";
             };
             serif = {
-                package = pkgs.nerd-fonts.jerbrains-mono;
+                package = pkgs.nerd-fonts.jetbrains-mono;
                 name = "JetBrainsMono Nerd Font";
             };
+        };
+        targets = {
+            regreet.enable = false;
         };
     };
 }
