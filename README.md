@@ -7,6 +7,8 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - Hyprland  (Eldritch theme)
     - Screensharing Enabled
 - Dolphin   (Default)
+- NH        (NixHelper)
+- Nix-Output-Module
 - Noctalia  (Eldritch theme)
 - Kitty     (Eldritch theme)
 - Zsh       (Prompt-simple)
@@ -20,7 +22,6 @@ I'm still learning NixOS and will continue to update this throughout my progress
 
 ### TODO: ###
 
-- Install NH
 - Install Scopebuddy
 - Install Greetr
 - Install Stylix
