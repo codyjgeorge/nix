@@ -24,6 +24,8 @@ I'm still learning NixOS and will continue to update this throughout my progress
 
 ### TODO: ###
 
+- Restructure with Den Framework
+- Setup Devenv/Dev Flakes
 - Install Scopebuddy
 - Config  Hyprland (on-going)
 - Config  Neovim (on-going)
