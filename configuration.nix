@@ -20,11 +20,6 @@
   };
 
   nix = {
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
 
     settings = {
       experimental-features = [
@@ -35,15 +30,15 @@
       substituters = [
         "https://cache.nixos.org"
         "https://nix-community.cachix.org"
-        "https://cache.garnix.io"
+        # "https://cache.garnix.io" --Shutdown May2026, possible community-run/self-hosted project coming
         # "https://hyprland.cachix.org"
         "https://noctalia.cachix.org"
       ];
       trusted-substituters = [
         # Official nix cache
         "https://cache.nixos.org"
-        # Garnix
-        "https://cache.garnix.io"
+        # Garnix --Shutdown May2026, possible community-run/self-hosted project coming
+        # "https://cache.garnix.io" 
         # Nix Community Cache
         "https://nix-community.cachix.org"
         # hyprland cache
@@ -56,8 +51,8 @@
         # Official nix cache
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
         # Personal Cachix cache
-        # Garnix
-        "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+        # Garnix --Shutdown May2026, possible community-run/self-hosted project coming
+        # "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
         # Nix community cache
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         # hyprland cache
