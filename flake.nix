@@ -87,6 +87,7 @@
 
                     inputs.noctalia.nixosModules.default
                     inputs.noctalia-greeter.nixosModules.default
+                    ./modules/greetd.nix
 
                     ./modules/nh.nix
 
