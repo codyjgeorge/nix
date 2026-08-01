@@ -6,10 +6,6 @@
 }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-  ];
-
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -79,7 +75,6 @@
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
-  networking.hostName = "Nuc";
 
   time.timeZone = "Europe/Warsaw";
 

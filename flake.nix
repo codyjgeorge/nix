@@ -51,41 +51,47 @@
       ...
     }:
     let
-        system = "x86_64-linux";
+        mkHost = name: system:
+            nixpkgs.lib.nixosSystem {
+                inherit system;
+                specialArgs = { inherit inputs; };
+                modules = [
+                    ./configuration.nix
+                    ./hosts/${name}/hardware-configuration.nix
+                    ./hosts/${name}/default.nix
+                    ({ ... }: { networking.hostName = name; })
+
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            users.cody = import ./home.nix;
+                            extraSpecialArgs = { inherit inputs; };
+                            backupFileExtension = "backup";
+                        };
+                    }
+
+                    nvf.nixosModules.default
+                    ./modules/nvf.nix
+
+                    ./modules/steam.nix
+
+                    ./modules/overlays.nix
+
+                    inputs.noctalia.nixosModules.default
+
+                    ./modules/nh.nix
+
+                    stylix.nixosModules.stylix
+                    ./modules/stylix.nix
+                ];
+            };
     in
     {
-      nixosConfigurations.nuc-nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs; };
-        modules = [
-
-          ./configuration.nix
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.cody = import ./home.nix;
-              extraSpecialArgs = { inherit inputs; };
-              backupFileExtension = "backup";
-            };
-          }
-
-          nvf.nixosModules.default
-          ./modules/nvf.nix
-
-          ./modules/steam.nix
-
-          ./modules/overlays.nix
-
-          inputs.noctalia.nixosModules.default
-
-          ./modules/nh.nix
-
-          stylix.nixosModules.stylix
-          ./modules/stylix.nix
-        ];
-      };
+        nixosConfigurations = {
+            nuc-nixos = mkHost "nuc-nixos" "x86_64-linux";
+            # other-pc = mkHost "other-pc" "x86_64-linux"; -- make hosts/other-pc/ folder
+        };
     };
 }
