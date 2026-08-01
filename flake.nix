@@ -28,7 +28,7 @@
     };
 
     nh = {
-      url = "github:NixOS/nixpkgs/nixos-unstable";
+      url = "github:nix-community/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
