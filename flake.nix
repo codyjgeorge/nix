@@ -31,6 +31,11 @@
       url = "github:nix-community/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -42,6 +47,7 @@
       spicetify-nix,
       eldritch-nvim,
       nh,
+      stylix,
       ...
     }:
     let
@@ -76,6 +82,9 @@
           inputs.noctalia.nixosModules.default
 
           ./modules/nh.nix
+
+          stylix.nixosModules.stylix
+          ./modules/stylix.nix
         ];
       };
     };
