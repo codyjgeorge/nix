@@ -21,6 +21,8 @@
 
     inputs.noctalia.homeModules.default
     ./hm/noctalia.nix
+
+    ./hm/stylix.nix
   ];
 
   home.username = "cody";

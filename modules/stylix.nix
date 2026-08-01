@@ -20,11 +20,5 @@
                 name = "JetBrainsMono Nerd Font";
             };
         };
-
-        targets = {
-            kitty.enable = false;
-            hyprland.enable = false;
-            nvf.enable = false;
-        };
     };
 }
