@@ -44,9 +44,12 @@
       nh,
       ...
     }:
+    let
+        system = "x86_64-linux";
+    in
     {
       nixosConfigurations.nuc-nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         specialArgs = { inherit inputs; };
         modules = [
 
