@@ -73,7 +73,8 @@ in
                                             { 
                                               section = "header";
                                               row = null;
-                                              #col = null;
+                                              col = null;
+                                              padding = 1;
                                             }
                                             { 
                                               section = "keys";
@@ -86,8 +87,8 @@ in
                                               icon = " ";
                                               title = "Recent Files";
                                               section = "recent_files";
-                                              indent = 2;
-                                              padding = [ 1 8 ];
+                                              indent = 3;
+                                              padding = 1;
                                               limit = 8;
                                             }
                                             { 
@@ -96,7 +97,7 @@ in
                                               title = "Projects";
                                               section = "projects";
                                               indent = 2;
-                                              padding = [ 1 8 ];
+                                              padding = 1;
                                             }
                                             {
                                               pane = 1;
@@ -113,12 +114,12 @@ in
                                         ];
                                         preset = {
                                             header = lib.mkLuaInline ''
-                                           [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
-                                            ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝
-                                            ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝ 
-                                            ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝  
-                                            ╚██████╗╚██████╔╝██████╔╝██████╔╝███████╗
-                                             ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝]]'';
+                                           [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗ ]]
+                                           [[ ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝ ]]
+                                           [[ ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝  ]]
+                                           [[ ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝   ]]
+                                           [[ ╚██████╗╚██████╔╝██████╔╝██████╔╝███████╗ ]]
+                                           [[  ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝ ]]'';
                                             keys = [
                                                 { icon = " "; key = "f"; desc = "Find File"; action = ":lua Snacks.dashboard.pick('files')"; }
                                                 { icon = " "; key = "n"; desc = "New File"; action = ":ene | startinsert"; }
