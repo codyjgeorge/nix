@@ -123,7 +123,7 @@ in
                                               limit = 8;
                                             }
                                             { 
-                                              pane = 1;
+                                              pane = 2;
                                               icon = " ";
                                               title = "Projects";
                                               section = "projects";
@@ -131,7 +131,7 @@ in
                                               padding = 1;
                                             }
                                             {
-                                              pane = 2;
+                                              pane = 1;
                                               section = "terminal";
                                               icon = " ";
                                               title = "Git Status";
