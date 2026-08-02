@@ -99,7 +99,7 @@ in
                                               title = "Recent Files";
                                               section = "recent_files";
                                               indent = 2;
-                                              padding = { 1, 6 };
+                                              padding = [ 1 6 ];
                                               limit = 8;
                                             }
                                             { 
