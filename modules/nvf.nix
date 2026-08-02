@@ -67,7 +67,7 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = 36;
+                                        width = 40;
                                         pane_gap = 2;
                                         sections = [
                                             { 
@@ -78,29 +78,11 @@ in
                                               width = 80;
                                             }
                                             { 
-                                              section = "keys";
                                               pane = 2;
+                                              section = "keys";
                                               width = 36;
                                               gap = 1; 
-                                              padding = 1; 
-                                            }
-                                            { 
-                                              pane = 3;
-                                              width = 36;
-                                              icon = " ";
-                                              title = "Recent Files";
-                                              section = "recent_files";
-                                              indent = 2;
-                                              padding = 1;
-                                              limit = 8;
-                                            }
-                                            { 
-                                              pane = 2;
-                                              icon = " ";
-                                              title = "Projects";
-                                              section = "projects";
-                                              indent = 2;
-                                              padding = 1;
+                                              padding = [ 1 10 ]; 
                                             }
                                             {
                                               pane = 2;
@@ -110,11 +92,29 @@ in
                                               cmd = "git status --short --branch --renames";
                                               enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
                                               height = 5;
-                                              padding = 8;
                                               indent = 3;
+                                              padding = 1;
                                               ttl = 300;
                                             }
-                                        ];
+                                            { 
+                                              pane = 3;
+                                              width = 36;
+                                              icon = " ";
+                                              title = "Recent Files";
+                                              section = "recent_files";
+                                              indent = 2;
+                                              padding = [ 1 10 ];
+                                              limit = 8;
+                                            }
+                                            { 
+                                              pane = 3;
+                                              icon = " ";
+                                              title = "Projects";
+                                              section = "projects";
+                                              indent = 2;
+                                              padding = 1;
+                                            }
+                                                                                    ];
                                         preset = {
                                             /*header = lib.mkLuaInline ''
                                            [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
