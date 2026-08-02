@@ -74,13 +74,22 @@ in
                                         sections = [
                                             { 
                                               section = "header";
-                                              padding = 2;
+                                              padding = 4;
                                             }
                                             { 
                                               section = "keys";
                                               pane = 1;
                                               gap = 1; 
-                                              padding = 1; 
+                                              padding = 4; 
+                                            }
+                                            { 
+                                              icon = " ";
+                                              title = "Projects";
+                                              section = "projects";
+                                              pane = 2;
+                                              padding = 2;
+                                              limit = 3;
+                                              indent = 3;
                                             }
                                             {
                                               section = "terminal";
@@ -94,32 +103,7 @@ in
                                               padding = 1;
                                               ttl = 300;
                                             }
-                                            { 
-                                              icon = " ";
-                                              pane = 2;
-                                              title = "Recent Files";
-                                              padding = 1;
-                                              limit = 5;
-                                            }
-                                            {
-                                              section = "recent_files";
-                                              pane = 2;
-                                              limit = 5;
-                                              padding = 1;
-                                            }
-                                            { 
-                                              icon = " ";
-                                              title = "Projects";
-                                              pane = 2;
-                                              padding = 1;
-                                            }
-                                            {
-                                              section = "projects";
-                                              pane = 2;
-                                              limit = 3;
-                                              indent = 3;
-                                            }
-                                                                                    ];
+                                        ];
                                         preset = {
                                             /*header = lib.mkLuaInline ''
                                            [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
