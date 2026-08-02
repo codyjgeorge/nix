@@ -67,7 +67,7 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = 36;
+                                        width = 76;
                                         pane_gap = 2;
                                         sections = [
                                             { 
@@ -75,20 +75,23 @@ in
                                               row = null;
                                               col = null;
                                               padding = 1;
+                                              width 76;
                                             }
                                             { 
                                               section = "keys";
-                                              pane = 1;
+                                              pane = 2;
+                                              width = 36;
                                               gap = 1; 
                                               padding = 1; 
                                             }
                                             { 
-                                              pane = 2;
+                                              pane = 3;
+                                              width = 36;
                                               icon = " ";
                                               title = "Recent Files";
                                               section = "recent_files";
                                               indent = 2;
-                                              padding = [ 1 15 ];
+                                              padding = 1;
                                               limit = 8;
                                             }
                                             { 
@@ -100,7 +103,7 @@ in
                                               padding = 1;
                                             }
                                             {
-                                              pane = 1;
+                                              pane = 2;
                                               section = "terminal";
                                               icon = " ";
                                               title = "Git Status";
