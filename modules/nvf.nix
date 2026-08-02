@@ -70,15 +70,19 @@ in
                                         width = 36;
                                         pane_gap = 4;
                                         sections = [
-                                            { section = "header"; }
+                                            { 
+                                              section = "header";
+                                              row = nil;
+                                              col = nil;
+                                            }
                                             { 
                                               section = "keys";
-                                              pane = 2;
+                                              pane = 1;
                                               gap = 1; 
                                               padding = 1; 
                                             }
                                             { 
-                                              pane = 3;
+                                              pane = 2;
                                               icon = " ";
                                               title = "Recent Files";
                                               section = "recent_files";
@@ -87,7 +91,7 @@ in
                                               limit = 8;
                                             }
                                             { 
-                                              pane = 3;
+                                              pane = 2;
                                               icon = " ";
                                               title = "Projects";
                                               section = "projects";
@@ -95,7 +99,7 @@ in
                                               padding = 1;
                                             }
                                             {
-                                              pane = 2;
+                                              pane = 1;
                                               section = "terminal";
                                               icon = " ";
                                               title = "Git Status";
@@ -109,7 +113,7 @@ in
                                         ];
                                         preset = {
                                             header = lib.mkLuaInline ''
-                                           [[██████╗ ██████╗ ██████╗ ██████╗ ███████╗
+                                           [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
                                             ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝
                                             ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝ 
                                             ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝  
