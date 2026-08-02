@@ -74,7 +74,7 @@ in
                                         sections = [
                                             { 
                                               section = "header";
-                                              padding = 4;
+                                              padding = 15;
                                             }
                                             { 
                                               section = "keys";
@@ -87,9 +87,9 @@ in
                                               title = "Projects";
                                               section = "projects";
                                               pane = 2;
-                                              padding = 2;
+                                              padding = 1;
                                               limit = 3;
-                                              indent = 3;
+                                              indent = 2;
                                             }
                                             {
                                               section = "terminal";
@@ -98,8 +98,8 @@ in
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
                                               enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
-                                              height = 5;
-                                              indent = 3;
+                                              height = 2;
+                                              indent = 2;
                                               padding = 1;
                                               ttl = 300;
                                             }
