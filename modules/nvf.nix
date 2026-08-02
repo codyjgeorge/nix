@@ -80,7 +80,7 @@ in
                                               section = "keys";
                                               pane = 1;
                                               gap = 1; 
-                                              padding = 40; 
+                                              padding = 8; 
                                             }
                                             { 
                                               icon = " ";
