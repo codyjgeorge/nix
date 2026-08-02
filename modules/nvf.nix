@@ -70,7 +70,7 @@ in
                                         width = 36;
                                         pane_gap = 2;
                                         sections = [
-                                            { section = "header" };
+                                            { section = "header"; }
                                             { 
                                               section = "keys"; 
                                               gap = 1; 
