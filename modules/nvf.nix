@@ -76,37 +76,33 @@ in
                                               width = 0;
                                               align = "center";
                                             }
+                                            { 
+                                              section = "keys";
+                                              pane = 1;
+                                              gap = 1; 
+                                              padding = 2;
+                                            }
+                                            { 
+                                              section = "projects";
+                                              icon = " ";
+                                              title = "Projects";
+                                              pane = 2;
+                                              padding = 10;
+                                              limit = 3;
+                                              indent = 2;
+                                            }
                                             {
-                                                sections = [
-                                                    { 
-                                                      section = "keys";
-                                                      pane = 1;
-                                                      gap = 1; 
-                                                      padding = 2;
-                                                    }
-                                                    { 
-                                                      section = "projects";
-                                                      icon = " ";
-                                                      title = "Projects";
-                                                      pane = 2;
-                                                      padding = 1;
-                                                      limit = 3;
-                                                      indent = 2;
-                                                    }
-                                                    {
-                                                      section = "terminal";
-                                                      pane = 2;
-                                                      icon = " ";
-                                                      title = "Git Status";
-                                                      cmd = "git status --short --branch --renames";
-                                                      enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
-                                                      height = 1;
-                                                      indent = 2;
-                                                      padding = 1;
-                                                      ttl = 300;
-                                                    }
-                                                ];
-                                             }
+                                              section = "terminal";
+                                              pane = 2;
+                                              icon = " ";
+                                              title = "Git Status";
+                                              cmd = "git status --short --branch --renames";
+                                              enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
+                                              height = 1;
+                                              indent = 2;
+                                              padding = 1;
+                                              ttl = 300;
+                                            }
                                         ];
                                         preset = {
                                             header = lib.mkLuaInline ''
