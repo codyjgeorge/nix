@@ -75,14 +75,14 @@ in
                                               row = null;
                                               col = null;
                                               padding = 1;
-                                              width = 80;
+                                              width = 120;
                                             }
                                             { 
                                               pane = 2;
                                               section = "keys";
                                               width = 36;
                                               gap = 1; 
-                                              padding = [ 1 10 ]; 
+                                              #padding = [ 1 10 ]; 
                                             }
                                             {
                                               pane = 2;
@@ -93,17 +93,17 @@ in
                                               enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
                                               height = 5;
                                               indent = 3;
-                                              padding = 1;
+                                              #padding = 1;
                                               ttl = 300;
                                             }
                                             { 
                                               pane = 3;
-                                              width = 36;
+                                              width = 40;
                                               icon = " ";
                                               title = "Recent Files";
                                               section = "recent_files";
                                               indent = 2;
-                                              padding = [ 1 10 ];
+                                              padding = 1;
                                               limit = 8;
                                             }
                                             { 
