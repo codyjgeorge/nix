@@ -124,7 +124,7 @@ in
                                             { 
                                               section = "keys"; 
                                               gap = 1; 
-                                              padding = [ 1 3 ]; 
+                                              padding = 3; 
                                             }
                                             { 
                                               pane = 2;
@@ -140,7 +140,7 @@ in
                                               icon = " ";
                                               title = "Projects";
                                               section = "projects";
-                                              indent = 4;
+                                              indent = 2;
                                               padding = 1;
                                             }
                                             {
