@@ -86,8 +86,6 @@ in
                                               pane = 2;
                                               icon = " ";
                                               title = "Recent Files";
-                                              padding = [ 1 8 ]
-                                            }
                                               section = "recent_files";
                                               indent = 3;
                                               padding = 1;
@@ -109,7 +107,7 @@ in
                                               cmd = "git status --short --branch --renames";
                                               enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
                                               height = 5;
-                                              padding = 1;
+                                              padding = 8;
                                               indent = 3;
                                               ttl = 300;
                                             }
