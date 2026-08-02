@@ -75,7 +75,7 @@ in
                                               row = null;
                                               col = null;
                                               padding = 1;
-                                              width 76;
+                                              width = 76;
                                             }
                                             { 
                                               section = "keys";
