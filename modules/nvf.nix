@@ -67,33 +67,30 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = null;
                                         pane_gap = 4;
                                         sections = [
                                             { 
                                               section = "header";
                                               padding = 8;
-                                              width = 0;
-                                              align = "center";
                                             }
                                             { 
                                               section = "keys";
                                               pane = 1;
                                               gap = 1; 
-                                              padding = 2;
+                                              padding = [ 1 3 ];
                                             }
                                             { 
                                               section = "projects";
                                               icon = " ";
                                               title = "Projects";
-                                              pane = 1;
-                                              padding = 1;
+                                              pane = 2;
+                                              padding = [ 1 8 ];
                                               limit = 3;
                                               indent = 2;
                                             }
                                             {
                                               section = "terminal";
-                                              pane = 1;
+                                              pane = 2;
                                               icon = " ";
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
