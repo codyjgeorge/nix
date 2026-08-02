@@ -75,6 +75,7 @@ in
                                             { 
                                               section = "header";
                                               padding = 8;
+                                              width = 80;
                                             }
                                             { 
                                               section = "keys";
@@ -87,7 +88,6 @@ in
                                               icon = " ";
                                               title = "Projects";
                                               pane = 2;
-                                              box = "horizontal";
                                               padding = 1;
                                               limit = 3;
                                               indent = 2;
@@ -107,7 +107,7 @@ in
                                         ];
                                         preset = {
                                             header = lib.mkLuaInline ''
-                                             [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
+                                           [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
                                               ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝
                                               ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝ 
                                               ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝  
