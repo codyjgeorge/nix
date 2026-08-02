@@ -74,13 +74,13 @@ in
                                         sections = [
                                             { 
                                               section = "header";
-                                              padding = 10;
+                                              padding = 8;
                                             }
                                             { 
                                               section = "keys";
                                               pane = 1;
                                               gap = 1; 
-                                              padding = 4; 
+                                              padding = 40; 
                                             }
                                             { 
                                               icon = " ";
@@ -98,10 +98,10 @@ in
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
                                               enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
-                                              height = 2;
+                                              height = 1;
                                               indent = 2;
                                               padding = 1;
-                                              ttl = 0;
+                                              ttl = 300;
                                             }
                                         ];
                                         preset = {
