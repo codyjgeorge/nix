@@ -72,8 +72,8 @@ in
                                         sections = [
                                             { 
                                               section = "header";
-                                              row = nil;
-                                              col = nil;
+                                              row = null;
+                                              col = null;
                                             }
                                             { 
                                               section = "keys";
