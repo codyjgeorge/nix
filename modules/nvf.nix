@@ -97,7 +97,7 @@ in
                                             { 
                                               section = "keys"; 
                                               gap = 1; 
-                                              padding = 1; 
+                                              padding = [ 1 6 ]; 
                                             }
                                             { 
                                               pane = 2;
