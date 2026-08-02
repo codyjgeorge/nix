@@ -70,6 +70,7 @@ in
                                         width = 36;
                                         pane_gap = 2;
                                         sections = [
+                                            # This Centers the ASCII Art
                                             (lib.mkLuaInline ''function(self)
                                                return {
                                                  header = self.opts.preset.header,
@@ -80,6 +81,7 @@ in
                                                    local art = vim.split(header, "\n", { plain = true, trimempty = true })
                                                    local total = #layout.panes * layout.opts.width
                                                      + math.max(#layout.panes - 1, 0) * layout.opts.pane_gap
+                                                    local starts = {}
                                                     for i, line in ipairs(art) do
                                                       local row = pos[1] + i - 1
                                                       local prev_len = #(layout.lines[row] or "")
@@ -90,14 +92,26 @@ in
                                                         new = new .. string.rep(" ", prev_len - #new)
                                                       end
                                                       layout.lines[row] = new
+                                                      starts[i] = #new - #line
                                                     end
+                                                    vim.schedule(function()
+                                                      if not vim.api.nvim_buf_is_valid(layout.buf) then return end
+                                                      local ns = require("snacks.dashboard").ns
+                                                      local row0 = pos[1] - 1
+                                                      vim.api.nvim_buf_clear_namespace(layout.buf, ns, row0, row0 + #art)
+                                                      for i = 1, #art do
+                                                        local line = (vim.api.nvim_buf_get_lines(layout.buf, row0 + i - 1, row0 + i, false) or { "" })[1] or ""
+                                                        local s = math.min(starts[i], #line)
+                                                        vim.api.nvim_buf_set_extmark(layout.buf, ns, row0 + i - 1, s, { hl_group = "SnacksDashboardHeader", end_col = #line })
+                                                      end
+                                                    end)
                                                  end,
                                                }
                                              end'')
                                             { 
                                               section = "keys"; 
                                               gap = 1; 
-                                              padding = [ 1 6 ]; 
+                                              padding = [ 1 2 ]; 
                                             }
                                             { 
                                               pane = 2;
@@ -105,7 +119,7 @@ in
                                               title = "Recent Files";
                                               section = "recent_files";
                                               indent = 2;
-                                              padding = [ 1 6 ];
+                                              padding = [ 1 8 ];
                                               limit = 8;
                                             }
                                             { 
