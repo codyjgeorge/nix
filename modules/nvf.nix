@@ -74,14 +74,17 @@ in
                                         sections = [
                                             { 
                                               section = "header";
+                                              padding = 2;
                                             }
                                             { 
                                               section = "keys";
+                                              pane = 1;
                                               gap = 1; 
                                               padding = 1; 
                                             }
                                             {
                                               section = "terminal";
+                                              pane = 1;
                                               icon = " ";
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
@@ -92,21 +95,29 @@ in
                                               ttl = 300;
                                             }
                                             { 
-                                              pane = 2;
                                               icon = " ";
+                                              pane = 2;
                                               title = "Recent Files";
-                                              section = "recent_files";
-                                              indent = 2;
                                               padding = 1;
                                               limit = 5;
                                             }
-                                            { 
+                                            {
+                                              section = "recent_files";
                                               pane = 2;
+                                              limit = 5;
+                                              padding = 1;
+                                            }
+                                            { 
                                               icon = " ";
                                               title = "Projects";
-                                              section = "projects";
-                                              indent = 2;
+                                              pane = 2;
                                               padding = 1;
+                                            }
+                                            {
+                                              section = "projects";
+                                              pane = 2;
+                                              limit = 3;
+                                              indent = 3;
                                             }
                                                                                     ];
                                         preset = {
