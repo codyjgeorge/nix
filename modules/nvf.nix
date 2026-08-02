@@ -81,7 +81,7 @@ in
                                             { 
                                               section = "keys";
                                               pane = 1;
-                                              width = .5;
+                                              width = 0.5;
                                               gap = 1; 
                                               padding = 2;
                                             }
@@ -90,7 +90,7 @@ in
                                               icon = " ";
                                               title = "Projects";
                                               pane = 2;
-                                              width = .5;
+                                              width = 0.5;
                                               padding = 1;
                                               limit = 3;
                                               indent = 2;
@@ -98,7 +98,7 @@ in
                                             {
                                               section = "terminal";
                                               pane = 2;
-                                              width = .5;
+                                              width = 0.5;
                                               icon = " ";
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
