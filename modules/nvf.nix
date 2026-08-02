@@ -123,7 +123,7 @@ in
                                               limit = 8;
                                             }
                                             { 
-                                              pane = 2;
+                                              pane = 1;
                                               icon = " ";
                                               title = "Projects";
                                               section = "projects";
