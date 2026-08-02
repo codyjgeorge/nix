@@ -69,11 +69,10 @@ in
                                     setupOpts.dashboard = {
                                         width = 0;
                                         pane_gap = 4;
-                                        row = null;
-                                        col = null;
                                         sections = [
                                             { 
                                               section = "header";
+                                              pane = 1;
                                               padding = 8;
                                               width = 0;
                                               align = "center";
@@ -82,8 +81,8 @@ in
                                             { 
                                               section = "keys";
                                               pane = 2;
-                                              width = 36;
                                               row = 2;
+                                              col = 1;
                                               gap = 1; 
                                               padding = 2;
                                             }
@@ -92,8 +91,8 @@ in
                                               icon = " ";
                                               title = "Projects";
                                               pane = 3;
-                                              width = 36;
                                               row = 2;
+                                              col = 2;
                                               padding = 1;
                                               limit = 3;
                                               indent = 2;
@@ -101,7 +100,6 @@ in
                                             {
                                               section = "terminal";
                                               pane = 3;
-                                              width = 36;
                                               row = 2;
                                               icon = " ";
                                               title = "Git Status";
