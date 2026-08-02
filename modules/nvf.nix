@@ -67,12 +67,27 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = 60;
-                                        row = "nil";
-                                        col = "nil";
-                                        pane_gap = 4;
+                                        width = 36;
+                                        pane_gap = 2;
                                         sections = [
-                                            { section = "header"; }
+                                            (lib.mkLuaInline ''function(self)
+                                               return {
+                                                 header = self.opts.preset.header,
+                                                 padding = 0,
+                                                 render = function(layout, pos)
+                                                   local header = layout.opts.preset.header
+                                                   if type(header) ~= "string" or header == "" then return end
+                                                   local art = vim.split(header, "\n", { plain = true, trimempty = true })
+                                                   local total = #layout.panes * layout.opts.width
+                                                     + math.max(#layout.panes - 1, 0) * layout.opts.pane_gap
+                                                   for i, line in ipairs(art) do
+                                                     local len = vim.api.nvim_strwidth(line)
+                                                     local pad = math.max(math.floor((total - len) / 2), 0)
+                                                     layout.lines[pos[1] + i - 1] = string.rep(" ", layout.col + pad) .. line
+                                                   end
+                                                 end,
+                                               }
+                                             end'')
                                             { 
                                               section = "keys"; 
                                               gap = 1; 
@@ -84,7 +99,7 @@ in
                                               title = "Recent Files";
                                               section = "recent_files";
                                               indent = 2;
-                                              padding = 1;
+                                              padding = { 1, 6 };
                                               limit = 8;
                                             }
                                             { 
