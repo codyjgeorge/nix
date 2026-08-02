@@ -67,7 +67,7 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = 76;
+                                        width = 36;
                                         pane_gap = 2;
                                         sections = [
                                             { 
@@ -75,7 +75,7 @@ in
                                               row = null;
                                               col = null;
                                               padding = 1;
-                                              width = 76;
+                                              width = 80;
                                             }
                                             { 
                                               section = "keys";
