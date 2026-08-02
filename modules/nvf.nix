@@ -93,7 +93,7 @@ in
                                             }
                                             {
                                               section = "terminal";
-                                              pane = 1;
+                                              pane = 2;
                                               icon = " ";
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
@@ -105,13 +105,13 @@ in
                                             }
                                         ];
                                         preset = {
-                                            /*header = lib.mkLuaInline ''
+                                            header = lib.mkLuaInline ''
                                            [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
                                               ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝
                                               ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝ 
                                               ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝  
                                               ╚██████╗╚██████╔╝██████╔╝██████╔╝███████╗
-                                               ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝]]'';*/
+                                               ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝]]'';
                                             keys = [
                                                 { icon = " "; key = "f"; desc = "Find File"; action = ":lua Snacks.dashboard.pick('files')"; }
                                                 { icon = " "; key = "n"; desc = "New File"; action = ":ene | startinsert"; }
