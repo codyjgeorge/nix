@@ -67,10 +67,6 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        pane_gap = 4;
-                                        row = null;
-                                        col = null;
-                                        align = "centered";
                                         sections = [
                                             { 
                                               section = "header";
