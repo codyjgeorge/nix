@@ -67,25 +67,20 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = 40;
-                                        pane_gap = 2;
+                                        width = 60;
+                                        pane_gap = 4;
+                                        row = null;
+                                        col = null;
                                         sections = [
                                             { 
                                               section = "header";
-                                              row = null;
-                                              col = null;
-                                              padding = 1;
-                                              width = 120;
                                             }
                                             { 
-                                              pane = 2;
                                               section = "keys";
-                                              width = 36;
                                               gap = 1; 
-                                              #padding = [ 1 10 ]; 
+                                              padding = 1; 
                                             }
                                             {
-                                              pane = 2;
                                               section = "terminal";
                                               icon = " ";
                                               title = "Git Status";
@@ -93,21 +88,20 @@ in
                                               enabled = lib.mkLuaInline "function() return Snacks.git.get_root() ~= nil end";
                                               height = 5;
                                               indent = 3;
-                                              #padding = 1;
+                                              padding = 1;
                                               ttl = 300;
                                             }
                                             { 
-                                              pane = 3;
-                                              width = 40;
+                                              pane = 2;
                                               icon = " ";
                                               title = "Recent Files";
                                               section = "recent_files";
                                               indent = 2;
                                               padding = 1;
-                                              limit = 8;
+                                              limit = 5;
                                             }
                                             { 
-                                              pane = 3;
+                                              pane = 2;
                                               icon = " ";
                                               title = "Projects";
                                               section = "projects";
