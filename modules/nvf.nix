@@ -87,7 +87,7 @@ in
                                               title = "Recent Files";
                                               section = "recent_files";
                                               indent = 2;
-                                              padding = 1;
+                                              padding = [ 1 8 ];
                                               limit = 8;
                                             }
                                             { 
@@ -96,7 +96,7 @@ in
                                               title = "Projects";
                                               section = "projects";
                                               indent = 2;
-                                              padding = 1;
+                                              padding = [ 1 8 ];
                                             }
                                             {
                                               pane = 1;
