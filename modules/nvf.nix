@@ -80,14 +80,14 @@ in
                                               section = "keys";
                                               pane = 1;
                                               gap = 1; 
-                                              padding = 1;
+                                              padding = 3;
                                             }
                                             { 
                                               section = "projects";
                                               icon = " ";
                                               title = "Projects";
                                               pane = 1;
-                                              padding = 4;
+                                              padding = 3;
                                               limit = 3;
                                               indent = 2;
                                             }
