@@ -67,7 +67,7 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = null;
+                                        width = 0;
                                         pane_gap = 4;
                                         row = null;
                                         col = null;
@@ -75,19 +75,22 @@ in
                                             { 
                                               section = "header";
                                               padding = 8;
-                                              width = null;
+                                              width = 0;
+                                              align = "center";
                                             }
                                             { 
                                               section = "keys";
                                               pane = 1;
+                                              width = .5;
                                               gap = 1; 
-                                              padding = 2; 
+                                              padding = 2;
                                             }
                                             { 
                                               section = "projects";
                                               icon = " ";
                                               title = "Projects";
                                               pane = 2;
+                                              width = .5;
                                               padding = 1;
                                               limit = 3;
                                               indent = 2;
@@ -95,6 +98,7 @@ in
                                             {
                                               section = "terminal";
                                               pane = 2;
+                                              width = .5;
                                               icon = " ";
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
@@ -107,7 +111,7 @@ in
                                         ];
                                         preset = {
                                             header = lib.mkLuaInline ''
-                                            [[ ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
+                                          [[   ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
                                               ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝
                                               ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝ 
                                               ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝  
