@@ -67,7 +67,7 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = 60;
+                                        width = 80;
                                         pane_gap = 4;
                                         row = null;
                                         col = null;
@@ -80,12 +80,12 @@ in
                                               section = "keys";
                                               pane = 1;
                                               gap = 1; 
-                                              padding = 8; 
+                                              padding = 2; 
                                             }
                                             { 
+                                              section = "projects";
                                               icon = " ";
                                               title = "Projects";
-                                              section = "projects";
                                               pane = 2;
                                               padding = 1;
                                               limit = 3;
@@ -106,7 +106,7 @@ in
                                         ];
                                         preset = {
                                             header = lib.mkLuaInline ''
-                                           [[  ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
+                                             [[██████╗ ██████╗ ██████╗ ██████╗ ███████╗
                                               ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝
                                               ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝ 
                                               ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝  
