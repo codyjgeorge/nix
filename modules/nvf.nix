@@ -70,6 +70,24 @@ in
                                         width = 60;
                                         sections = [
                                             { section = "header"; }
+                                            { section = "keys"; gap = 1; padding = 1; }
+                                            { 
+                                              pane = 2;
+                                              icon = " ";
+                                              title = "Recent Files";
+                                              section = "recent_files";
+                                              indent = 2;
+                                              padding = 1;
+                                              limit = 8;
+                                            }
+                                            { 
+                                              pane = 2;
+                                              icon = " ";
+                                              title = "Projects";
+                                              section = "projects";
+                                              indent = 2;
+                                              padding = 1;
+                                            }
                                             {
                                               pane = 2;
                                               section = "terminal";
@@ -82,9 +100,6 @@ in
                                               indent = 3;
                                               ttl = 300;
                                             }
-                                            { section = "keys"; gap = 1; padding = 1; }
-                                            { section = "recent_files"; icon = " "; title = "Recent Files"; indent = 2; limit = 8; }
-                                            { section = "projects"; icon = " "; title = "Projects"; indent = 2; }
                                         ];
                                         preset = {
                                             header = lib.mkLuaInline ''
