@@ -74,7 +74,7 @@ in
                                         sections = [
                                             { 
                                               section = "header";
-                                              padding = 15;
+                                              padding = 10;
                                             }
                                             { 
                                               section = "keys";
@@ -101,7 +101,7 @@ in
                                               height = 2;
                                               indent = 2;
                                               padding = 1;
-                                              ttl = 300;
+                                              ttl = 0;
                                             }
                                         ];
                                         preset = {
