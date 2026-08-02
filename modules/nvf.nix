@@ -111,7 +111,7 @@ in
                                             { 
                                               section = "keys"; 
                                               gap = 1; 
-                                              padding = [ 1 2 ]; 
+                                              padding = [ 1 4 ]; 
                                             }
                                             { 
                                               pane = 2;
