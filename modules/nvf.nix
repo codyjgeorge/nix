@@ -72,7 +72,6 @@ in
                                         sections = [
                                             { 
                                               section = "header";
-                                              pane = 1;
                                               padding = 8;
                                               width = 0;
                                               align = "center";
@@ -80,7 +79,7 @@ in
                                             }
                                             { 
                                               section = "keys";
-                                              pane = 2;
+                                              pane = 1;
                                               row = 2;
                                               col = 1;
                                               gap = 1; 
@@ -90,7 +89,7 @@ in
                                               section = "projects";
                                               icon = " ";
                                               title = "Projects";
-                                              pane = 3;
+                                              pane = 2;
                                               row = 2;
                                               col = 2;
                                               padding = 1;
@@ -99,7 +98,7 @@ in
                                             }
                                             {
                                               section = "terminal";
-                                              pane = 3;
+                                              pane = 2;
                                               row = 2;
                                               icon = " ";
                                               title = "Git Status";
