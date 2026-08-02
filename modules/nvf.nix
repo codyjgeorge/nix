@@ -67,14 +67,14 @@ in
                                 utility."snacks-nvim" = {
                                     enable = true;
                                     setupOpts.dashboard = {
-                                        width = 36;
-                                        pane_gap = 2;
+                                        width = 60;
+                                        pane_gap = 4;
                                         sections = [
                                             { section = "header"; }
                                             { 
                                               section = "keys"; 
                                               gap = 1; 
-                                              padding = [ 1 3 ]; 
+                                              padding = 1; 
                                             }
                                             { 
                                               pane = 2;
@@ -82,7 +82,7 @@ in
                                               title = "Recent Files";
                                               section = "recent_files";
                                               indent = 2;
-                                              padding = [ 1 8 ];
+                                              padding = [ 1 6 ];
                                               limit = 8;
                                             }
                                             { 
