@@ -72,8 +72,8 @@ in
                                         sections = [
                                             { 
                                               section = "header";
-                                              #row = null;
-                                              #col = null;
+                                              row = null;
+                                              col = null;
                                               padding = 1;
                                             }
                                             { 
