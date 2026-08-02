@@ -87,8 +87,8 @@ in
                                               icon = " ";
                                               title = "Recent Files";
                                               section = "recent_files";
-                                              indent = 3;
-                                              padding = 1;
+                                              indent = 2;
+                                              padding = [ 1 15 ];
                                               limit = 8;
                                             }
                                             { 
