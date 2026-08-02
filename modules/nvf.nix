@@ -70,29 +70,30 @@ in
                                         pane_gap = 4;
                                         row = null;
                                         col = null;
+                                        align = "centered";
                                         sections = [
                                             { 
                                               section = "header";
-                                              padding = 1;
+                                              padding = 8;
                                             }
                                             { 
                                               section = "keys";
                                               pane = 1;
                                               gap = 1; 
-                                              padding = [ 1 3 ];
+                                              padding = 1;
                                             }
                                             { 
                                               section = "projects";
                                               icon = " ";
                                               title = "Projects";
-                                              pane = 2;
-                                              padding = [ 1 8 ];
-                                              #limit = 3;
+                                              pane = 1;
+                                              padding = 4;
+                                              limit = 3;
                                               indent = 2;
                                             }
                                             {
                                               section = "terminal";
-                                              pane = 2;
+                                              pane = 1;
                                               icon = " ";
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
