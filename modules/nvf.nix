@@ -80,11 +80,17 @@ in
                                                    local art = vim.split(header, "\n", { plain = true, trimempty = true })
                                                    local total = #layout.panes * layout.opts.width
                                                      + math.max(#layout.panes - 1, 0) * layout.opts.pane_gap
-                                                   for i, line in ipairs(art) do
-                                                     local len = vim.api.nvim_strwidth(line)
-                                                     local pad = math.max(math.floor((total - len) / 2), 0)
-                                                     layout.lines[pos[1] + i - 1] = string.rep(" ", layout.col + pad) .. line
-                                                   end
+                                                    for i, line in ipairs(art) do
+                                                      local row = pos[1] + i - 1
+                                                      local prev_len = #(layout.lines[row] or "")
+                                                      local len = vim.api.nvim_strwidth(line)
+                                                      local pad = math.max(math.floor((total - len) / 2), 0)
+                                                      local new = string.rep(" ", layout.col + pad) .. line
+                                                      if #new < prev_len then
+                                                        new = new .. string.rep(" ", prev_len - #new)
+                                                      end
+                                                      layout.lines[row] = new
+                                                    end
                                                  end,
                                                }
                                              end'')
