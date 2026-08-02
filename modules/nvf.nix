@@ -82,39 +82,26 @@ in
                                                     local total = #layout.panes * layout.opts.width
                                                       + math.max(#layout.panes - 1, 0) * layout.opts.pane_gap
                                                      local starts = {}
-                                                     if vim.g.dash_debug then
-                                                       print("RENDER header=" .. vim.inspect(header))
-                                                       print("RENDER total=" .. total .. " col=" .. layout.col .. " panes=" .. #layout.panes .. " pos=" .. vim.inspect(pos))
-                                                     end
                                                      for i, line in ipairs(art) do
                                                        local row = pos[1] + i - 1
                                                        local prev_len = #(layout.lines[row] or "")
                                                        local len = vim.api.nvim_strwidth(line)
                                                        local pad = math.max(math.floor((total - len) / 2), 0)
                                                        local new = string.rep(" ", layout.col + pad) .. line
+                                                       starts[i] = #new - #line
                                                        if #new < prev_len then
                                                          new = new .. string.rep(" ", prev_len - #new)
                                                        end
                                                        layout.lines[row] = new
-                                                       starts[i] = #new - #line
-                                                       if vim.g.dash_debug then
-                                                         print(string.format("RENDER art[%d] row=%d bytes=%d strw=%d pad=%d newbytes=%d starts=%d", i, row, #line, len, pad, #new, starts[i]))
-                                                       end
                                                      end
                                                      vim.schedule(function()
                                                        if not vim.api.nvim_buf_is_valid(layout.buf) then return end
                                                        local ns = require("snacks.dashboard").ns
                                                        local row0 = pos[1] - 1
                                                        vim.api.nvim_buf_clear_namespace(layout.buf, ns, row0, row0 + #art)
-                                                       if vim.g.dash_debug then
-                                                         print("SCHED row0=" .. row0 .. " nart=" .. #art .. " starts=" .. vim.inspect(starts))
-                                                       end
                                                        for i = 1, #art do
                                                          local line = (vim.api.nvim_buf_get_lines(layout.buf, row0 + i - 1, row0 + i, false) or { "" })[1] or ""
                                                          local s = math.min(starts[i], #line)
-                                                         if vim.g.dash_debug then
-                                                           print(string.format("SCHED row=%d buflen=%d start=%d", row0 + i - 1, #line, s))
-                                                         end
                                                          vim.api.nvim_buf_set_extmark(layout.buf, ns, row0 + i - 1, s, { hl_group = "SnacksDashboardHeader", end_col = #line })
                                                        end
                                                      end)
