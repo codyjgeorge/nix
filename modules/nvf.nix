@@ -77,11 +77,13 @@ in
                                               padding = 8;
                                               width = 0;
                                               align = "center";
+                                              row = 1;
                                             }
                                             { 
                                               section = "keys";
-                                              pane = 1;
+                                              pane = 2;
                                               width = 36;
+                                              row = 2;
                                               gap = 1; 
                                               padding = 2;
                                             }
@@ -89,16 +91,18 @@ in
                                               section = "projects";
                                               icon = " ";
                                               title = "Projects";
-                                              pane = 2;
+                                              pane = 3;
                                               width = 36;
+                                              row = 2;
                                               padding = 1;
                                               limit = 3;
                                               indent = 2;
                                             }
                                             {
                                               section = "terminal";
-                                              pane = 2;
+                                              pane = 3;
                                               width = 36;
+                                              row = 2;
                                               icon = " ";
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
@@ -111,7 +115,7 @@ in
                                         ];
                                         preset = {
                                             header = lib.mkLuaInline ''
-                                          [[   ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
+                                          [[    ██████╗ ██████╗ ██████╗ ██████╗ ███████╗
                                               ██╔════╝██╔═══██╗██╔══██╗╚════██╗╚══███╔╝
                                               ██║     ██║   ██║██║  ██║ █████╔╝  ███╔╝ 
                                               ██║     ██║   ██║██║  ██║ ╚═══██╗ ███╔╝  
