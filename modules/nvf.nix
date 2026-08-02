@@ -73,8 +73,7 @@ in
                                             { 
                                               section = "header";
                                               row = null;
-                                              col = null;
-                                              padding = [ 1 1 ];
+                                              #col = null;
                                             }
                                             { 
                                               section = "keys";
