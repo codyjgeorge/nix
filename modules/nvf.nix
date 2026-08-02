@@ -68,10 +68,12 @@ in
                                     enable = true;
                                     setupOpts.dashboard = {
                                         pane_gap = 4;
+                                        row = null;
+                                        col = null;
                                         sections = [
                                             { 
                                               section = "header";
-                                              padding = 8;
+                                              padding = 1;
                                             }
                                             { 
                                               section = "keys";
@@ -85,7 +87,7 @@ in
                                               title = "Projects";
                                               pane = 2;
                                               padding = [ 1 8 ];
-                                              limit = 3;
+                                              #limit = 3;
                                               indent = 2;
                                             }
                                             {
