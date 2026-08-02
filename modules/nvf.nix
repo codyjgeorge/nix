@@ -86,9 +86,11 @@ in
                                               pane = 2;
                                               icon = " ";
                                               title = "Recent Files";
+                                              padding = [ 1 8 ]
+                                            }
                                               section = "recent_files";
                                               indent = 3;
-                                              padding = [ 1 8 ];
+                                              padding = 1;
                                               limit = 8;
                                             }
                                             { 
