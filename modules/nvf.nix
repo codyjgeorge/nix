@@ -87,7 +87,7 @@ in
                                               icon = " ";
                                               title = "Projects";
                                               pane = 2;
-                                              padding = 10;
+                                              padding = 1;
                                               limit = 3;
                                               indent = 2;
                                             }
