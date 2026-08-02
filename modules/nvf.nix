@@ -86,14 +86,14 @@ in
                                               section = "projects";
                                               icon = " ";
                                               title = "Projects";
-                                              pane = 2;
+                                              pane = 1;
                                               padding = 1;
                                               limit = 3;
                                               indent = 2;
                                             }
                                             {
                                               section = "terminal";
-                                              pane = 2;
+                                              pane = 1;
                                               icon = " ";
                                               title = "Git Status";
                                               cmd = "git status --short --branch --renames";
