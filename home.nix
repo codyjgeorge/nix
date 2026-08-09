@@ -33,6 +33,7 @@
         wowup-cf
         opencode
         mcp-nixos
+        godot
   ];
 
   xdg.enable = true;
