@@ -15,6 +15,7 @@
     ./hm/zsh.nix
     ./hm/opencode.nix
     ./hm/mcp-nixos.nix
+    ./hm/curseforge.nix
 
     inputs.spicetify-nix.homeManagerModules.default
     ./hm/spicetify.nix
@@ -30,7 +31,6 @@
   home.stateVersion = "26.05";
   home.packages = with pkgs; [
         obsidian
-        wowup-cf
         opencode
         mcp-nixos
         godot
