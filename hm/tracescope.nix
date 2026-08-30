@@ -24,6 +24,14 @@ in
                 ''
                     install -m 444 -D ${contents}/tracescope.desktop $out/share/applications/tracescope.desktop
                     cp -r ${contents}/usr/share/icons $out/share/icons
+
+                    mv $out/bin/TraceScope $out/bin/.TraceScope-bin
+                    cat > $out/bin/TraceScope <<'EOF'
+                    #!/bin/sh
+                    export QT_QPA_PLATFORM=xcb
+                    exec "$(dirname "$0")/.TraceScope-bin" "$@"
+                    EOF
+                    chmod +x $out/bin/TraceScope
                 '';
         })
     ];
