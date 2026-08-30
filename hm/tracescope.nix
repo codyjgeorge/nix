@@ -23,8 +23,6 @@ in
                 in
                 ''
                     install -m 444 -D ${contents}/tracescope.desktop $out/share/applications/tracescope.desktop
-                    substituteInPlace $out/share/applications/tracescope.desktop \
-                      --replace-fail 'Exec=TraceScope' 'Exec=tracescope'
                     cp -r ${contents}/usr/share/icons $out/share/icons
                 '';
         })
