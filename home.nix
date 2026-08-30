@@ -24,8 +24,6 @@
     ./hm/noctalia.nix
 
     ./hm/stylix.nix
-
-    ./hm/tracescope.nix
   ];
 
   home.username = "cody";
