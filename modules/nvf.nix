@@ -53,6 +53,14 @@ in
             lsp.enable = true;
             dap.enable = true;
           };
+
+          rust = {
+            enable = true;
+            format.enable = true;
+            treesitter.enable = true;
+            lsp.enable = true;
+            dap.enable = true;
+          };
         };
         clipboard = {
           enable = true;
