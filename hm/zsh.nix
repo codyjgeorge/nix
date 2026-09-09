@@ -9,6 +9,7 @@
 
             initContent = ''
               fastfetch
+              eval "$(devenv hook zsh)"
             '';
 
             shellAliases = {
