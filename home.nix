@@ -34,6 +34,7 @@
         opencode
         mcp-nixos
         godot
+        devenv
   ];
 
   xdg.enable = true;
