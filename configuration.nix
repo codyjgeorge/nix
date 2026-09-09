@@ -141,8 +141,6 @@
     curl
     nh
     nix-output-monitor
-    rustc
-    cargo
 
   ];
 
