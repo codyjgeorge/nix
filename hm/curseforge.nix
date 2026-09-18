@@ -3,7 +3,7 @@
 let
     curseforge = pkgs.fetchurl {
         url = "https://curseforge.overwolf.com/downloads/curseforge-latest-linux.AppImage";
-        hash = "sha256-ZH4ZkFSoT8bQgcQPkszcux4gds4DHwrD7Vyub+13mgQ=";
+        hash = "sha256-ddF+Xz+xKqeMKrK1uDHCvKT29swfX1V7Dt6+/suDAxI=";
     };
 in
 {
@@ -11,13 +11,13 @@ in
         (pkgs.appimageTools.wrapType2 {
             pname = "CurseForge";
             name = "curseforge";
-            version = "1.314.0";
+            version = "1.320.0";
             src = curseforge;
             extraInstallCommands =
                 let
                     contents = pkgs.appimageTools.extract {
                         pname = "CurseForge";
-                        version = "1.314.0";
+version = "1.320.0";
                         src = curseforge;
                     };
                 in
