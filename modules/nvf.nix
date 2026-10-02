@@ -61,6 +61,13 @@ in
             lsp.enable = true;
             dap.enable = true;
           };
+
+          zig = {
+            enable = true;
+            format.enable = true;
+            treesitter.enable = true;
+            lsp.enable = true;
+          };
         };
         clipboard = {
           enable = true;
