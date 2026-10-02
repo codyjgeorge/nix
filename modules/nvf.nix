@@ -64,7 +64,6 @@ in
 
           zig = {
             enable = true;
-            format.enable = true;
             treesitter.enable = true;
             lsp.enable = true;
           };
