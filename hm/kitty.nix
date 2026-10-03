@@ -10,6 +10,12 @@
 		};
 		settings = {
 			background_opacity = lib.mkDefault 0.80;
+
+            # Cursor
+            cursor_trail = 3;
+
+            # Shaders
+            custom_shaders = "cursor-trail-blaze";
 		};
 	};
 }
