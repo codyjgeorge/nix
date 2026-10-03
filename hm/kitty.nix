@@ -13,6 +13,8 @@
 
             # Cursor
             cursor_trail = 3;
+            cursor_trail_color = "#37f499";
+            cursor_trail_color_accent = "#04d1f9";
 
             # Shaders
             custom_shaders = "cursor-trail-blaze";
