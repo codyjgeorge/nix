@@ -26,7 +26,6 @@ in
           "render-markdown-nvim"
           "precognition-nvim"
           "nvim-lint"
-          "nvim-colorizer-lua"
           "which-key-nvim"
           userPlugins."eldritch-nvim"
         ];
