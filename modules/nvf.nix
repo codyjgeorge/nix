@@ -32,6 +32,7 @@ in
         ];
         viAlias = false;
         vimAlias = true;
+        autopairs.nvim-autopairs.enable = true;
         lsp = {
           enable = true;
         };
