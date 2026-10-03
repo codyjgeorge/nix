@@ -1,7 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-    programs.noctalia-greeter = {
+    services.displayManager.noctalia-greeter = {
         enable = true;
 
         settings = {
