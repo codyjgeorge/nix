@@ -27,7 +27,6 @@
     };
     targets = {
       regreet.enable = false;
-      home-manager.users.cody.stylix.targets.rofi.enable = false;
     };
   };
 }

@@ -10,6 +10,7 @@
             spicetify.enable = false;
             noctalia.enable = false;
             vesktop.enable = false;
+            rofi.enable = false;
         };
     };
 }
