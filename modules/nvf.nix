@@ -180,6 +180,13 @@ in
             silent = true;
             desc = "Compile and Run C++";
           }
+          {
+            key = "<leader>t";
+            mode = [ "n" ];
+            action = ":Neotree";
+            silent = true;
+            desc = "Toggle Neotree";
+          }
         ];
       };
     };
