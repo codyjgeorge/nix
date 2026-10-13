@@ -183,7 +183,7 @@ in
           {
             key = "<leader>t";
             mode = [ "n" ];
-            action = ":Neotree toggle";
+            action = ":Neotree toggle<CR>";
             silent = true;
             desc = "Toggle Neotree";
           }
