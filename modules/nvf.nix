@@ -27,7 +27,6 @@ in
           "precognition-nvim"
           "nvim-lint"
           "which-key-nvim"
-          "neo-tree-nvim"
           userPlugins."eldritch-nvim"
         ];
         viAlias = false;
@@ -85,6 +84,7 @@ in
           autoindent = true;
           shiftwidth = 4;
         };
+        filetree.neo-tree.enable = true;
         utility."snacks-nvim" = {
           enable = true;
           setupOpts.dashboard = {
@@ -179,13 +179,6 @@ in
             action = ":w<CR>:split | term g++ % -o main && ./main<CR>";
             silent = true;
             desc = "Compile and Run C++";
-          }
-          {
-            key = "<leader>t";
-            mode = [ "n" ];
-            action = ":Neotree toggle<CR>";
-            silent = true;
-            desc = "Toggle Neo-tree";
           }
         ];
       };
