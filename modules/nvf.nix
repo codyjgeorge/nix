@@ -173,6 +173,7 @@ in
           toggleterm.enable = true;
         };
         keymaps = [
+        # <CR> is Carriage Return, executes command, like pressing enter in command line
           {
             key = "<leader>r";
             mode = [ "n" ];
