@@ -43,7 +43,7 @@
         {
             type = "colors";
             paddingLeft = 6;
-            symbol = "circle";
+            symbol = "star";
         }
       ];
     };
