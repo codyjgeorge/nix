@@ -17,7 +17,10 @@
         "de"
         "wm"
         "wmtheme"
-        "theme"
+        {
+          type = "theme";
+          format = "{theme1}";
+        }
         "icons"
         {
           type = "font";
