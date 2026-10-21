@@ -7,43 +7,45 @@
       modules = [
         #"title"
         #"separator"
+        #"uptime"
+        #"display"
+        #"de"
+        #"wmtheme"
+        #"cursor"
+        #"localip"
+        #"battery"
+        #"poweradapter"
+        #"locale"
+        #"icons"
         "os"
         "host"
         "kernel"
-        #"uptime"
         "packages"
-        "shell"
-        #"display"
-        #"de"
-        "wm"
-        #"wmtheme"
-        {
-          type = "command";
-          key = "Theme";
-          text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
-        }
-        "icons"
-        {
-          type = "font";
-          format = "{font1}";
-        }
-        #"cursor"
-        "terminal"
-        "terminalfont"
+        "break"
         "cpu"
         "gpu"
         "memory"
         "swap"
         "disk"
-        #"localip"
-        #"battery"
-        #"poweradapter"
-        #"locale"
+        "break"
+        "wm"
+        {
+          type = "font";
+          format = "{font1}";
+        }
+        "shell"
+        "terminal"
+        "terminalfont"
         "break"
         {
+          type = "command";
+          key = "Theme";
+          text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
+        }
+        {
             type = "colors";
-            paddingLeft = 6;
-            symbol = "star";
+            paddingLeft = 10;
+            symbol = "triangle";
         }
       ];
     };
