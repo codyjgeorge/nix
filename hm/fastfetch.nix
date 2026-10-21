@@ -18,9 +18,9 @@
         "wm"
         "wmtheme"
         {
-          type = "Command";
+          type = "command";
           key = "Theme";
-          text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix'';
+          text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
         }
         "icons"
         {
