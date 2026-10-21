@@ -24,6 +24,7 @@
     ./hm/noctalia.nix
 
     ./hm/stylix.nix
+    ./hm/fastfetch.nix
   ];
 
   home.username = "cody";
