@@ -5,18 +5,18 @@
     enable = true;
     settings = {
       modules = [
-        "title"
-        "separator"
+        #"title"
+        #"separator"
         "os"
         "host"
         "kernel"
-        "uptime"
+        #"uptime"
         "packages"
         "shell"
-        "display"
-        "de"
+        #"display"
+        #"de"
         "wm"
-        "wmtheme"
+        #"wmtheme"
         {
           type = "command";
           key = "Theme";
@@ -27,7 +27,7 @@
           type = "font";
           format = "{font1}";
         }
-        "cursor"
+        #"cursor"
         "terminal"
         "terminalfont"
         "cpu"
@@ -35,10 +35,10 @@
         "memory"
         "swap"
         "disk"
-        "localip"
-        "battery"
-        "poweradapter"
-        "locale"
+        #"localip"
+        #"battery"
+        #"poweradapter"
+        #"locale"
         "break"
         {
             type = "colors";
