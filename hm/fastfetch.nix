@@ -44,8 +44,7 @@
         }
         {
             type = "colors";
-            paddingLeft = 2;
-            symbol = "diamond";
+            symbol = "circle";
         }
       ];
     };
