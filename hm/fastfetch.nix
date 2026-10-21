@@ -40,7 +40,11 @@
         "poweradapter"
         "locale"
         "break"
-        "colors"
+        {
+            type = "colors";
+            paddingLeft = 6;
+            symbol = "circle";
+        }
       ];
     };
   };
