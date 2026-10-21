@@ -17,8 +17,8 @@
         #"poweradapter"
         #"locale"
         #"icons"
-        "os"
         "host"
+        "os"
         "kernel"
         "packages"
         "break"
@@ -44,8 +44,8 @@
         }
         {
             type = "colors";
-            paddingLeft = 10;
-            symbol = "triangle";
+            paddingLeft = 2;
+            symbol = "diamond";
         }
       ];
     };
