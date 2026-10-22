@@ -17,7 +17,7 @@ in
     programs.fastfetch = {
     enable = true;
     settings = {
-      display.serparator = "  "; # changes ":" after 'key: value' to 'key  value' 
+      display.separator = "  "; # changes ":" after 'key: value' to 'key  value' 
       modules = [
         #"title"
         #"separator"
