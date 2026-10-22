@@ -4,7 +4,6 @@ let
 
   # number of "─" characters in the top/separator/bottom lines.
   inner = 48;
-  indent = "    ";
 
   # a list containing n copies of "─" and concatenates into one string "─────"
   borderLine = n: lib.concatStrings (lib.replicate n "─");
@@ -18,7 +17,8 @@ in
     programs.fastfetch = {
     enable = true;
     settings = {
-      display.separator = "  "; # changes ":" after 'key: value' to 'key  value' 
+      display.separator = "  "; # changes ":" after 'key: value' to 'key  value'
+      display.key.paddingLeft = 4;
       modules = [
         #"title"
         #"separator"
@@ -38,19 +38,19 @@ in
         }
         {
           type = "host";
-          key = indent "󰇅 Host";
+          key = "󰇅 Host";
         }
         {
           type = "os";
-          key = indent " OS";
+          key = " OS";
         }
         {
           type = "kernel";
-          key = indent " Kernel";
+          key = " Kernel";
         }
         {
           type = "packages";
-          key = indent " Packages";
+          key = " Packages";
         }
         {
           type = "custom";
@@ -58,23 +58,23 @@ in
         }
         {
           type = "cpu";
-          key = indent " CPU";
+          key = " CPU";
         }
         {
           type = "gpu";
-          key = indent "󰾲 GPU";
+          key = "󰾲 GPU";
         }
         {
           type = "memory";
-          key = indent " Memory";
+          key = " Memory";
         }
         {
           type = "swap";
-          key = indent "󰓡 Swap";
+          key = "󰓡 Swap";
         }
         {
           type = "disk";
-          key = indent " Disk";
+          key = " Disk";
         }
         {
           type = "custom";
@@ -82,24 +82,24 @@ in
         }
         {
           type = "wm";
-          key = indent " Window Manager";
+          key = " Window Manager";
         }
         {
           type = "font";
-          key = indent "󰙏 Font";
+          key = "󰙏 Font";
           format = "{font1}";
         }
         {
           type = "shell";
-          key = indent " Shell";
+          key = " Shell";
         }
         {
           type = "terminal";
-          key = indent "󰄛 Terminal";
+          key = "󰄛 Terminal";
         }
         {
           type = "terminalfont";
-          key = indent "󰙏 Terminal Font";
+          key = "󰙏 Terminal Font";
         }
         {
           type = "custom";
