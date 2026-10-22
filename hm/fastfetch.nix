@@ -19,7 +19,7 @@
         #"icons"
         {
           type = "custom";
-          format = "|-{$1}{$1}-|"
+          format = "|-{$1}{$1}-|";
         }
         {
           type = "host";
