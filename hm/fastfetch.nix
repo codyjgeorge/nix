@@ -3,17 +3,17 @@
 let
 
   # number of "─" characters in the top/separator/bottom lines.
-  inner = 64;
+  inner = 48;
 
   # a list containing n copies of "─" and concatenates into one string "─────"
   borderLine = n: lib.concatStrings (lib.replicate n "─");
 
-  # indent 4 spaces on string s
-  indent = s: "    " + s;
+  # indent 2 spaces on string s
+  indent = s: "  " + s;
 
   top = "╭${borderLine inner}╮";
   bottom = "╰${borderLine inner}╯";
-  separator = "|${borderLine (inner - 2)}|";
+  separator = "├${borderLine (inner - 2)}┤";
 
 in
 {
@@ -116,7 +116,7 @@ in
         {
             type = "colors";
             symbol = "circle";
-            paddingLeft = 2;
+            #paddingLeft = 2;
         }
       ];
     };
