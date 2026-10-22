@@ -1,9 +1,23 @@
 { config, pkgs, lib, ... }:
 
+let
+
+  # number of "─" characters in the top/separator/bottom lines.
+  inner = 48;
+
+  # a list containing n copies of "─" and concatenates into one string "─────"
+  borderLine = n: lib.concatStrings (lib.replicate n "─");
+
+  top = "╭${borderLine inner}╮";
+  bottom = "╰${borderLine inner}╯";
+  separator = "|-${borderLine (inner - 2)}-|";
+
+in
 {
     programs.fastfetch = {
     enable = true;
     settings = {
+      display.serparator = "  "; # changes ":" after 'key: value' to 'key  value' 
       modules = [
         #"title"
         #"separator"
@@ -19,7 +33,7 @@
         #"icons"
         {
           type = "custom";
-          format = "|-{$1}{$1}-|";
+          format = top; # top border
         }
         {
           type = "host";
@@ -38,8 +52,8 @@
           key = " Packages";
         }
         {
-          type = "break";
-          key = "----->";
+          type = "custom";
+          format = separator; # separator border
         }
         {
           type = "cpu";
@@ -62,8 +76,8 @@
           key = " Disk";
         }
         {
-          type = "break";
-          key = "----->";
+          type = "custom";
+          format = separator; # separator border
         }
         {
           type = "wm";
@@ -86,7 +100,10 @@
           type = "terminalfont";
           key = "󰙏 Terminal Font";
         }
-        "separator"
+        {
+          type = "custom";
+          format = bottom; # bottom border
+        }
         {
           type = "command";
           key = " Theme";
@@ -95,6 +112,7 @@
         {
             type = "colors";
             symbol = "circle";
+            leftPadding = 2;
         }
       ];
     };
