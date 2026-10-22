@@ -18,7 +18,10 @@
         #"locale"
         #"icons"
         "host"
-        "os"
+        {
+          type = "os";
+          key = " OS";
+        }
         "kernel"
         "packages"
         "break"
