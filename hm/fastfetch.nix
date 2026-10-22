@@ -17,32 +17,69 @@
         #"poweradapter"
         #"locale"
         #"icons"
-        "host"
+        {
+          type = "host";
+          key = "󰇅 Host";
+        }
         {
           type = "os";
           key = " OS";
         }
-        "kernel"
-        "packages"
+        {
+          type = "kernel";
+          key = " Kernel";
+        }
+        {
+          type = "packages";
+          key = " Packages";
+        }
         "break"
-        "cpu"
-        "gpu"
-        "memory"
-        "swap"
-        "disk"
+        {
+          type = "cpu";
+          key = " CPU";
+        }
+        {
+          type = "gpu";
+          key = "󰾲 GPU";
+        }
+        {
+          type = "memory";
+          key = " Memory";
+        }
+        {
+          type = "swap";
+          key = "󰓡 Swap";
+        }
+        {
+          type = "disk";
+          key = " Disk";
+        }
         "break"
-        "wm"
+        {
+          type = "wm";
+          key = " Window Manager";
+        }
         {
           type = "font";
+          key = "󰙏 Font";
           format = "{font1}";
         }
-        "shell"
-        "terminal"
-        "terminalfont"
+        {
+          type = "shell";
+          key = " Shell";
+        }
+        {
+          type = "terminal";
+          key = "󰄛 Terminal";
+        }
+        {
+          type = "terminalfont";
+          key = "󰙏 Terminal Font";
+        }
         "break"
         {
           type = "command";
-          key = "Theme";
+          key = " Theme";
           text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
         }
         {
