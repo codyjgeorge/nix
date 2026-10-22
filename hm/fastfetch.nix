@@ -13,7 +13,7 @@ let
 
   top = "╭${borderLine inner}╮";
   bottom = "╰${borderLine inner}╯";
-  separator = "├${borderLine (inner - 2)}┤";
+  separator = "├${borderLine inner}┤";
 
 in
 {
