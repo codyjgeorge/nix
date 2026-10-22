@@ -20,8 +20,10 @@ in
     programs.fastfetch = {
     enable = true;
     settings = {
-      display.separator = "  "; # changes ":" after 'key: value' to 'key  value'
-      display.key.paddingLeft = 4;
+      display = {
+        separator = "  "; # changes ":" after 'key: value' to 'key  value'
+        key.width = 18;
+      };
       modules = [
         #"title"
         #"separator"
