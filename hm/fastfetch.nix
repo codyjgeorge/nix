@@ -3,10 +3,13 @@
 let
 
   # number of "─" characters in the top/separator/bottom lines.
-  inner = 48;
+  inner = 64;
 
   # a list containing n copies of "─" and concatenates into one string "─────"
   borderLine = n: lib.concatStrings (lib.replicate n "─");
+
+  # indent 4 spaces on string s
+  indent = s: "    " + s;
 
   top = "╭${borderLine inner}╮";
   bottom = "╰${borderLine inner}╯";
@@ -38,19 +41,19 @@ in
         }
         {
           type = "host";
-          key = "󰇅 Host";
+          key = indent "󰇅 Host";
         }
         {
           type = "os";
-          key = " OS";
+          key = indent " OS";
         }
         {
           type = "kernel";
-          key = " Kernel";
+          key = indent " Kernel";
         }
         {
           type = "packages";
-          key = " Packages";
+          key = indent " Packages";
         }
         {
           type = "custom";
@@ -58,23 +61,23 @@ in
         }
         {
           type = "cpu";
-          key = " CPU";
+          key = indent " CPU";
         }
         {
           type = "gpu";
-          key = "󰾲 GPU";
+          key = indent "󰾲 GPU";
         }
         {
           type = "memory";
-          key = " Memory";
+          key = indent " Memory";
         }
         {
           type = "swap";
-          key = "󰓡 Swap";
+          key = indent "󰓡 Swap";
         }
         {
           type = "disk";
-          key = " Disk";
+          key = indent " Disk";
         }
         {
           type = "custom";
@@ -82,24 +85,24 @@ in
         }
         {
           type = "wm";
-          key = " Window Manager";
+          key = indent " Window Manager";
         }
         {
           type = "font";
-          key = "󰙏 Font";
+          key = indent "󰙏 Font";
           format = "{font1}";
         }
         {
           type = "shell";
-          key = " Shell";
+          key = indent " Shell";
         }
         {
           type = "terminal";
-          key = "󰄛 Terminal";
+          key = indent "󰄛 Terminal";
         }
         {
           type = "terminalfont";
-          key = "󰙏 Terminal Font";
+          key = indent "󰙏 Terminal Font";
         }
         {
           type = "custom";
