@@ -3,7 +3,7 @@
 let
 
   # number of "─" characters in the top/separator/bottom lines.
-  inner = 48;
+  inner = 80;
 
   # a list containing n copies of "─" and concatenates into one string "─────"
   borderLine = n: lib.concatStrings (lib.replicate n "─");
