@@ -17,22 +17,25 @@
         #"poweradapter"
         #"locale"
         #"icons"
-        "separator"
+        {
+          type = "custom";
+          format = "|-{$1}{$1}-|"
+        }
         {
           type = "host";
-          key = "|-󰇅 Host";
+          key = "󰇅 Host";
         }
         {
           type = "os";
-          key = "|- OS";
+          key = " OS";
         }
         {
           type = "kernel";
-          key = "|- Kernel";
+          key = " Kernel";
         }
         {
           type = "packages";
-          key = "|- Packages";
+          key = " Packages";
         }
         {
           type = "break";
@@ -40,23 +43,23 @@
         }
         {
           type = "cpu";
-          key = "|- CPU";
+          key = " CPU";
         }
         {
           type = "gpu";
-          key = "|-󰾲 GPU";
+          key = "󰾲 GPU";
         }
         {
           type = "memory";
-          key = "|- Memory";
+          key = " Memory";
         }
         {
           type = "swap";
-          key = "|-󰓡 Swap";
+          key = "󰓡 Swap";
         }
         {
           type = "disk";
-          key = "|- Disk";
+          key = " Disk";
         }
         {
           type = "break";
@@ -64,24 +67,24 @@
         }
         {
           type = "wm";
-          key = "|- Window Manager";
+          key = " Window Manager";
         }
         {
           type = "font";
-          key = "|-󰙏 Font";
+          key = "󰙏 Font";
           format = "{font1}";
         }
         {
           type = "shell";
-          key = "|- Shell";
+          key = " Shell";
         }
         {
           type = "terminal";
-          key = "|-󰄛 Terminal";
+          key = "󰄛 Terminal";
         }
         {
           type = "terminalfont";
-          key = "|-󰙏 Terminal Font";
+          key = "󰙏 Terminal Font";
         }
         "separator"
         {
