@@ -2,8 +2,8 @@
 
 let
 
-  # number of "─" characters in the top/separator/bottom lines.
-  # inner = 71; -> 71 "─" across with no title to cover return for CPU 
+  # number of "─" characters in bottom border
+  inner = 71; 
 
   # a list containing n copies of "─" and concatenates into one string "─────"
   borderLine = n: lib.concatStrings (lib.replicate n "─");
@@ -11,9 +11,10 @@ let
   # indent 2 spaces on string s
   indent = s: "  " + s;
 
-  top = "╭${borderLine 32} STUFF ${borderLine 32}╮";
-  bottom = "╰${borderLine 32} THINGS ${borderLine 31}╯";
-  separator = "├${borderLine 27} STUFF and THINGS ${borderLine 26}┤";
+  top        = "╭${borderLine 32} STUFF ${borderLine 32}╮";
+  separator1 = "├${borderLine 32} THINGS ${borderLine 31}┤";
+  separator2 = "├${borderLine 27} STUFF and THINGS ${borderLine 26}┤";
+  bottom     = "╰${borderLine inner}╯";
 
 in
 {
@@ -59,7 +60,7 @@ in
         }
         {
           type = "custom";
-          format = separator; # separator border
+          format = separator1; # separator1 border
         }
         {
           type = "cpu";
@@ -83,7 +84,7 @@ in
         }
         {
           type = "custom";
-          format = separator; # separator border
+          format = separator2; # separator border
         }
         {
           type = "wm";
