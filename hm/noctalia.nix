@@ -16,10 +16,13 @@
         builtin = "Eldritch";
       };
 
+
       wallpaper = {
         enable = true;
         default.path = "./wallpapers/hyprland_anime.jpg";
       };
+
+      enable_notification_sounds = false;
     };
   };
 }
