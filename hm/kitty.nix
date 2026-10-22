@@ -6,7 +6,7 @@
 		themeFile = "Eldritch-dark";
 		font = {
 			name = lib.mkDefault "JetBrainsMono Nerd Font Mono";
-			size = lib.mkDefault 14;
+			size = lib.mkDefault 12;
 		};
 		settings = {
 			background_opacity = lib.mkDefault 0.80;

@@ -22,7 +22,7 @@ in
     settings = {
       display = {
         separator = "  "; # changes ":" after 'key: value' to 'key  value'
-        key.width = 18;
+        key.width = 21;
       };
       modules = [
         #"title"
