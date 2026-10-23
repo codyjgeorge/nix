@@ -9,6 +9,11 @@ let
   eldPurple = "#a48cf2";
   eldGreen  = "#37f499";
   eldBlue   = "#39ddfd";
+  eldYellow = "#f1fc79";
+
+  # inline-color helper
+  # makeColor eldYellow -> {##f1fc79}
+  makeColor = c: "{#${c}}";
 
   # a list containing n copies of "─" and concatenates into one string "─────"
   borderLine = n: lib.concatStrings (lib.replicate n "─");
@@ -16,9 +21,9 @@ let
   # indent 2 spaces on string s
   indent = s: "  " + s;
 
-  top        = "╭${borderLine 32} STUFF ${borderLine 32}╮";
-  separator1 = "├${borderLine 32} THINGS ${borderLine 31}┤";
-  separator2 = "├${borderLine 27} STUFF and THINGS ${borderLine 26}┤";
+  top        = "╭${borderLine 32} ${makeColor eldYellow}STUFF${makeColor eldBlue} ${borderLine 32}╮";
+  separator1 = "├${borderLine 32} ${makeColor eldYellow}THINGS${makeColor eldBlue} ${borderLine 31}┤";
+  separator2 = "├${borderLine 27} ${makeColor eldYellow}STUFF and THINGS${makeColor eldBlue} ${borderLine 26}┤";
   bottom     = "╰${borderLine inner}╯";
 
 in
@@ -84,14 +89,22 @@ in
         {
           type = "memory";
           key = indent " Memory";
+          percent.type = [ "num" ];
+          format = "{used} / {total} (${makeColor eldBlue}{percentage}${makeColor eldGreen})";
         }
         {
           type = "swap";
           key = indent "󰓡 Swap";
+          percent.type = [ "num" ];
+          format = "{used} / {total} (${makeColor eldBlue}{percentage}${makeColor eldGreen})";
+
         }
         {
           type = "disk";
           key = indent " Disk";
+          percent.type = [ "num" ];
+          format = "{size-used} / {size-total} (${makeColor eldBlue}{size-percentage}${makeColor eldGreen}) - {filesystem}";
+
         }
         {
           type = "custom";
