@@ -18,8 +18,6 @@ let
   # a list containing n copies of "─" and concatenates into one string "─────"
   borderLine = n: lib.concatStrings (lib.replicate n "─");
 
-  # indent 2 spaces on string s
-  # indent = s: "  " + s;
 
   # indent n spaces on string s
   indent = n: lib.concatStrings (lib.replicate n " ");
@@ -152,13 +150,13 @@ in
         {
           type = "command";
           key = indent 28 + " Theme";
-          keyWidth = 38;
+          keyWidth = 39;
           text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
         }
         {
           type = "colors";
           symbol = "circle";
-          paddingLeft = 29;
+          paddingLeft = 30;
         }
       ];
     };
