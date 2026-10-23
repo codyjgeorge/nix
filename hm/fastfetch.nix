@@ -151,14 +151,14 @@ in
         }
         {
           type = "command";
-          key = indent 26 + " Theme";
+          key = indent 28 + " Theme";
           keyWidth = 36;
           text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
         }
         {
           type = "colors";
           symbol = "circle";
-          paddingLeft = 27;
+          paddingLeft = 29;
         }
       ];
     };
