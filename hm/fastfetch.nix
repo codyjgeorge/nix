@@ -21,9 +21,9 @@ let
   # indent 2 spaces on string s
   indent = s: "  " + s;
 
-  top        = "╭${borderLine 32} ${makeColor eldPurple}STUFF${makeColor eldBlue} ${borderLine 32}╮";
-  separator1 = "├${borderLine 32} ${makeColor eldPurple}THINGS${makeColor eldBlue} ${borderLine 31}┤";
-  separator2 = "├${borderLine 27} ${makeColor eldPurple}STUFF and THINGS${makeColor eldBlue} ${borderLine 26}┤";
+  top1       = "╭${borderLine 32} ${makeColor eldPurple}STUFF${makeColor eldBlue} ${borderLine 32}╮";
+  top2       = "╭${borderLine 32} ${makeColor eldPurple}THINGS${makeColor eldBlue} ${borderLine 31}╮";
+  top3       = "╭${borderLine 27} ${makeColor eldPurple}STUFF and THINGS${makeColor eldBlue} ${borderLine 26}╮";
   bottom     = "╰${borderLine inner}╯";
 
 in
@@ -54,7 +54,7 @@ in
         #"icons"
         {
           type = "custom";
-          format = top; # top border
+          format = top1; # top1 border
           outputColor = eldBlue;
         }
         {
@@ -75,7 +75,12 @@ in
         }
         {
           type = "custom";
-          format = separator1; # separator1 border
+          format = bottom;
+          outputColor = eldBlue;
+        }
+        {
+          type = "custom";
+          format = top2; # top2 border
           outputColor = eldBlue;
         }
         {
@@ -110,7 +115,12 @@ in
         }
         {
           type = "custom";
-          format = separator2; # separator2 border
+          format = bottom;
+          outputColor = eldBlue;
+        }
+        {
+          type = "custom";
+          format = top3; # top3 border
           outputColor = eldBlue;
         }
         {
