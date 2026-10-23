@@ -149,7 +149,7 @@ in
         }
         {
           type = "command";
-          key = indent 28 + " Theme";
+          key = indent 29 + " Theme";
           keyWidth = 39;
           text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
         }
