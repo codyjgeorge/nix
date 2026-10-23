@@ -86,7 +86,7 @@ in
         {
           type = "gpu";
           key = indent "󰾲 GPU";
-          format = "{vendor} {name} @ ${makeColor eldYellow}{frequency}${makeColor eldGreen}[{type}]";
+          format = "{vendor} {name} @ ${makeColor eldYellow}{frequency}${makeColor eldGreen} [{type}]";
         }
         {
           type = "memory";
@@ -118,11 +118,6 @@ in
           key = indent " Window Manager";
           format = "{pretty-name} {version} (${makeColor eldYellow}{protocol-name}${makeColor eldGreen})";
         }
-        /*{
-         * type = "font";
-         * key = indent "󰙏 Font";
-         * format = "{font1} (${makeColor eldYellow}{size}pt${makeColor eldGreen})";
-        }*/
         {
           type = "shell";
           key = indent " Shell";
@@ -144,6 +139,7 @@ in
         {
           type = "command";
           key = " Theme";
+          keyWidth = 0;
           text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
         }
         {
