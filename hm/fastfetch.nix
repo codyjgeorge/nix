@@ -139,13 +139,13 @@ in
         {
           type = "command";
           key = " Theme";
-          keyWidth = 0;
+          keyWidth = 1;
           text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
         }
         {
-            type = "colors";
-            symbol = "circle";
-            #paddingLeft = 2;
+          type = "colors";
+          symbol = "circle";
+          #paddingLeft = 2;
         }
       ];
     };
