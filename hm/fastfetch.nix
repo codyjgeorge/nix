@@ -3,7 +3,12 @@
 let
 
   # number of "─" characters in bottom border
-  inner = 71; 
+  inner = 71;
+
+  # eldritch colors
+  eldPurple = "#a48cf2";
+  eldGreen  = "#37f499";
+  eldBlue   = "#39ddfd";
 
   # a list containing n copies of "─" and concatenates into one string "─────"
   borderLine = n: lib.concatStrings (lib.replicate n "─");
@@ -24,6 +29,10 @@ in
       display = {
         separator = "  "; # changes ":" after 'key: value' to 'key  value'
         key.width = 21;
+        color = {
+          keys = eldPurple;
+          output = eldGreen;
+        };
       };
       modules = [
         #"title"
@@ -41,6 +50,7 @@ in
         {
           type = "custom";
           format = top; # top border
+          outputColor = eldBlue;
         }
         {
           type = "host";
@@ -61,6 +71,7 @@ in
         {
           type = "custom";
           format = separator1; # separator1 border
+          outputColor = eldBlue;
         }
         {
           type = "cpu";
@@ -85,6 +96,7 @@ in
         {
           type = "custom";
           format = separator2; # separator border
+          outputColor = eldBlue;
         }
         {
           type = "wm";
@@ -110,6 +122,7 @@ in
         {
           type = "custom";
           format = bottom; # bottom border
+          outputColor = eldBlue;
         }
         {
           type = "command";
