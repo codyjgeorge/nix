@@ -86,7 +86,7 @@ in
         {
           type = "gpu";
           key = indent "󰾲 GPU";
-          format = "{name} @ ${makeColor eldYellow}{freq-max}${makeColor eldGreen}[{type}]";
+          format = "{vendor} {name} @ ${makeColor eldYellow}{frequency}${makeColor eldGreen}[{type}]";
         }
         {
           type = "memory";
