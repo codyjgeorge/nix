@@ -86,6 +86,7 @@ in
         {
           type = "gpu";
           key = indent "󰾲 GPU";
+          format = "{name} ({core-count}) @ ${makeColor eldYellow}{frequency}${makeColor eldGreen}";
         }
         {
           type = "memory";
@@ -109,7 +110,7 @@ in
         }
         {
           type = "custom";
-          format = separator2; # separator border
+          format = separator2; # separator2 border
           outputColor = eldBlue;
         }
         {
@@ -117,11 +118,11 @@ in
           key = indent " Window Manager";
           format = "{pretty-name} {version} (${makeColor eldYellow}{protocol-name}${makeColor eldGreen})";
         }
-        {
-          type = "font";
-          key = indent "󰙏 Font";
-          format = "{font1} (${makeColor eldYellow}{size}pt${makeColor eldGreen})";
-        }
+        /*{
+         * type = "font";
+         * key = indent "󰙏 Font";
+         * format = "{font1} (${makeColor eldYellow}{size}pt${makeColor eldGreen})";
+        }*/
         {
           type = "shell";
           key = indent " Shell";
