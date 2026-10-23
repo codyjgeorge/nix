@@ -19,7 +19,10 @@ let
   borderLine = n: lib.concatStrings (lib.replicate n "─");
 
   # indent 2 spaces on string s
-  indent = s: "  " + s;
+  # indent = s: "  " + s;
+
+  # indent n spaces on string s
+  indent = n: lib.concatStrings (lib.replicate n " ");
 
   top1       = "╭${borderLine 32} ${makeColor eldPurple}STUFF${makeColor eldBlue} ${borderLine 32}╮";
   top2       = "╭${borderLine 32} ${makeColor eldPurple}THINGS${makeColor eldBlue} ${borderLine 31}╮";
@@ -59,19 +62,19 @@ in
         }
         {
           type = "host";
-          key = indent "󰇅 Host";
+          key = indent 2 + "󰇅 Host";
         }
         {
           type = "os";
-          key = indent " OS";
+          key = indent 2 + " OS";
         }
         {
           type = "kernel";
-          key = indent " Kernel";
+          key = indent 2 + " Kernel";
         }
         {
           type = "packages";
-          key = indent " Packages";
+          key = indent 2 + " Packages";
         }
         {
           type = "custom";
@@ -85,30 +88,30 @@ in
         }
         {
           type = "cpu";
-          key = indent " CPU";
+          key = indent 2 + " CPU";
           format = "{name} ({cores-logical}) @ ${makeColor eldYellow}{freq-max}${makeColor eldGreen}";
         }
         {
           type = "gpu";
-          key = indent "󰾲 GPU";
+          key = indent 2 + "󰾲 GPU";
           format = "{vendor} {name} @ ${makeColor eldYellow}{frequency}${makeColor eldGreen} [{type}]";
         }
         {
           type = "memory";
-          key = indent " Memory";
+          key = indent 2 + " Memory";
           percent.type = [ "num" ];
           format = "{used} / {total} (${makeColor eldYellow}{percentage}${makeColor eldGreen})";
         }
         {
           type = "swap";
-          key = indent "󰓡 Swap";
+          key = indent 2 + "󰓡 Swap";
           percent.type = [ "num" ];
           format = "{used} / {total} (${makeColor eldYellow}{percentage}${makeColor eldGreen})";
 
         }
         {
           type = "disk";
-          key = indent " Disk";
+          key = indent 2 + " Disk";
           percent.type = [ "num" ];
           format = "{size-used} / {size-total} (${makeColor eldYellow}{size-percentage}${makeColor eldGreen}) - {filesystem}";
 
@@ -125,20 +128,20 @@ in
         }
         {
           type = "wm";
-          key = indent " Window Manager";
+          key = indent 2 + " Window Manager";
           format = "{pretty-name} {version} (${makeColor eldYellow}{protocol-name}${makeColor eldGreen})";
         }
         {
           type = "shell";
-          key = indent " Shell";
+          key = indent 2 + " Shell";
         }
         {
           type = "terminal";
-          key = indent "󰄛 Terminal";
+          key = indent 2 + "󰄛 Terminal";
         }
         {
           type = "terminalfont";
-          key = indent "󰙏 Terminal Font";
+          key = indent 2 + "󰙏 Terminal Font";
           format = "{name} (${makeColor eldYellow}{size}pt${makeColor eldGreen})";
         }
         {
@@ -148,14 +151,14 @@ in
         }
         {
           type = "command";
-          key = " Theme";
+          key = indent 26 + " Theme";
           keyWidth = 10;
           text = ''grep -oP 'themes/\K[^.]+' /home/cody/nix/modules/stylix.nix | sed 's/^./\U&/' '';
         }
         {
           type = "colors";
           symbol = "circle";
-          paddingLeft = 1;
+          paddingLeft = 27;
         }
       ];
     };
