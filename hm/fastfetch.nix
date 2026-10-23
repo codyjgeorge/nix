@@ -81,6 +81,7 @@ in
         {
           type = "cpu";
           key = indent " CPU";
+          format = "{name} ({cores-logical}) @ ${makeColor eldYellow}{freq-max}${makeColor eldGreen}";
         }
         {
           type = "gpu";
@@ -114,11 +115,12 @@ in
         {
           type = "wm";
           key = indent " Window Manager";
+          format = "{pretty-name} {version} (${makeColor eldYellow}{protocol-name}${makeColor eldGreen})";
         }
         {
           type = "font";
           key = indent "󰙏 Font";
-          format = "{font1}";
+          format = "{font1} (${makeColor eldYellow}{size}pt${makeColor eldGreen})";
         }
         {
           type = "shell";
@@ -131,6 +133,7 @@ in
         {
           type = "terminalfont";
           key = indent "󰙏 Terminal Font";
+          format = "{name} (${makeColor eldYellow}{size}pt${makeColor eldGreen})";
         }
         {
           type = "custom";
