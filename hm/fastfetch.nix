@@ -21,9 +21,9 @@ let
   # indent 2 spaces on string s
   indent = s: "  " + s;
 
-  top        = "╭${borderLine 32} ${makeColor eldYellow}STUFF${makeColor eldBlue} ${borderLine 32}╮";
-  separator1 = "├${borderLine 32} ${makeColor eldYellow}THINGS${makeColor eldBlue} ${borderLine 31}┤";
-  separator2 = "├${borderLine 27} ${makeColor eldYellow}STUFF and THINGS${makeColor eldBlue} ${borderLine 26}┤";
+  top        = "╭${borderLine 32} ${makeColor eldPurple}STUFF${makeColor eldBlue} ${borderLine 32}╮";
+  separator1 = "├${borderLine 32} ${makeColor eldPurple}THINGS${makeColor eldBlue} ${borderLine 31}┤";
+  separator2 = "├${borderLine 27} ${makeColor eldPurple}STUFF and THINGS${makeColor eldBlue} ${borderLine 26}┤";
   bottom     = "╰${borderLine inner}╯";
 
 in
@@ -90,20 +90,20 @@ in
           type = "memory";
           key = indent " Memory";
           percent.type = [ "num" ];
-          format = "{used} / {total} (${makeColor eldBlue}{percentage}${makeColor eldGreen})";
+          format = "{used} / {total} (${makeColor eldYellow}{percentage}${makeColor eldGreen})";
         }
         {
           type = "swap";
           key = indent "󰓡 Swap";
           percent.type = [ "num" ];
-          format = "{used} / {total} (${makeColor eldBlue}{percentage}${makeColor eldGreen})";
+          format = "{used} / {total} (${makeColor eldYellow}{percentage}${makeColor eldGreen})";
 
         }
         {
           type = "disk";
           key = indent " Disk";
           percent.type = [ "num" ];
-          format = "{size-used} / {size-total} (${makeColor eldBlue}{size-percentage}${makeColor eldGreen}) - {filesystem}";
+          format = "{size-used} / {size-total} (${makeColor eldYellow}{size-percentage}${makeColor eldGreen}) - {filesystem}";
 
         }
         {
