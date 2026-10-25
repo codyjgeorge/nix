@@ -14,8 +14,8 @@
         };
 
         cursor = {
-            name = "eldritch-great-old-green-cursors";
-            package = inputs.eldritch-cursors.packages.${pkgs.stdenv.hostPlatform.system}.great-old-green;
+            name = "eldritch-watery-tomb-blue-cursors";
+            package = inputs.eldritch-cursors.packages.${pkgs.stdenv.hostPlatform.system}.watery-tomb-blue;
             size = 24;
         };
 
