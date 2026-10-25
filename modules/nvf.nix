@@ -188,6 +188,13 @@ in
             silent = true;
             desc = "Toggle Neotree";
           }
+          {
+            key = "<leader>n";
+            mode = [ "n" ];
+            action = "vim.wo.relativenumber = not vim.wo.relativenumber";
+            silent = true;
+            desc = "Toggle Relative/Line numbers";
+          }
         ];
       };
     };
