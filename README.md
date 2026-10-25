@@ -19,14 +19,12 @@ I'm still learning NixOS and will continue to update this throughout my progress
 - Spicetify (Sleek-Eldritch theme)
 - Obsidian  (Eldritch theme w/ plugins)
 - Nix-Output-Module
+- Devenv/Dev Flakes
 - Steam
 - BattleNet
+- Godot
 
 ### TODO: ###
 
 - Restructure with Den Framework
-- Setup Devenv/Dev Flakes
 - Install Scopebuddy
-- Config  Hyprland (on-going)
-- Config  Neovim (on-going)
-- Config  Noctalia (on-going)
