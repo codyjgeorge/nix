@@ -14,7 +14,7 @@
         };
 
         cursor = {
-            name = "eldritch-watery-tomb-blue-cursors";
+            name = "eldritch-watery-tomb-blue-cursors"; # "eldritch-color-name-here-cursors", also update package below
             package = inputs.eldritch-cursors.packages.${pkgs.stdenv.hostPlatform.system}.watery-tomb-blue;
             size = 24;
         };
