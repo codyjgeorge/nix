@@ -191,7 +191,7 @@ in
           {
             key = "<leader>n";
             mode = [ "n" ];
-            action = "vim.wo.relativenumber = not vim.wo.relativenumber";
+            action = ":set relativenumber!<CR>";
             silent = true;
             desc = "Toggle Relative/Line numbers";
           }
