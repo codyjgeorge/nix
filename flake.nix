@@ -18,6 +18,11 @@
         flake = false;
     };
 
+    eldritch-cursors = {
+        url = "github:eldritch-theme/cursors";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -51,6 +56,7 @@
       nvf,
       spicetify-nix,
       eldritch-nvim,
+      eldritch-cursors,
       nh,
       stylix,
       noctalia-greeter,

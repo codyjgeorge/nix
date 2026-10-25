@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
     stylix = {
@@ -12,5 +12,13 @@
             vesktop.enable = false;
             rofi.enable = false;
         };
+
+        cursor = {
+            name = "eldritch-great-old-green-cursors";
+            package = inputs.eldritch-cursors.packages.${pkgs.stdenv.hostPlatform.system}.great-old-green;
+            size = 24;
+        };
+
+        home.pointerCursor.hyprcursor.enable = true;
     };
 }
