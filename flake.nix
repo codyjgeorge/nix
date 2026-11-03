@@ -46,6 +46,10 @@
         url = "github:noctalia-dev/noctalia-greeter";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-agent = {
+        url = "github:JEFF7712/nix-agent/v0.14.0";
+    };
   };
 
   outputs =

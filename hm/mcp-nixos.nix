@@ -1,5 +1,9 @@
 { config, pkgs, inputs, ... }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+  nixAgent = inputs.nix-agent.packages.${system}.default;
+in
 {
     programs.mcp = {
         enable = true;
@@ -13,11 +17,11 @@
                 ];
             };
             nix-agent = {
-                command = "nix";
-                args = [
-                    "run"
-                    "github:JEFF7712/nix-agent"
-                ];
+                command = "${nixAgent}/bin/nix-agent";
+                args = [ ];
+                env = {
+                  NIX_AGENT_FLAKE = "/home/cody/nix";
+                };
             };
         };
     };
