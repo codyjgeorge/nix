@@ -11,6 +11,7 @@
             noctalia.enable = false;
             vesktop.enable = false;
             rofi.enable = false;
+            zathura.enable = true;
         };
 
         cursor = {

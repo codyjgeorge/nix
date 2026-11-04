@@ -16,15 +16,15 @@
     ./hm/opencode.nix
     ./hm/mcp-nixos.nix
     ./hm/curseforge.nix
+    ./hm/stylix.nix
+    ./hm/fastfetch.nix
+    ./hm/zathura.nix
 
     inputs.spicetify-nix.homeManagerModules.default
     ./hm/spicetify.nix
 
     inputs.noctalia.homeModules.default
     ./hm/noctalia.nix
-
-    ./hm/stylix.nix
-    ./hm/fastfetch.nix
   ];
 
   home.username = "cody";
@@ -36,7 +36,7 @@
         mcp-nixos
         godot
         devenv
-        zathura
+        zathura-keys
   ];
 
   xdg.enable = true;

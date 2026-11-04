@@ -374,6 +374,13 @@
                 size = { 1080, 920 },
             })
 
+            -- Zathura Settings
+            hl.window_rule({
+                match = { class = "zathura-cheatsheet" },
+                float = true,
+                size = { 1000, 700, center }
+            })
+
             hl.workspace_rule({workspace = "1", monitor = primary, persistent = true})
             hl.workspace_rule({workspace = "2", monitor = primary, persistent = true})
             hl.workspace_rule({workspace = "3", monitor = primary, persistent = true})
