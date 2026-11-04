@@ -378,7 +378,8 @@
             hl.window_rule({
                 match = { class = "zathura-cheatsheet" },
                 float = true,
-                size = { 1000, 700, center }
+                size = { 1000, 700 },
+                center = true,
             })
 
             hl.workspace_rule({workspace = "1", monitor = primary, persistent = true})

@@ -36,7 +36,6 @@
         mcp-nixos
         godot
         devenv
-        zathura-keys
   ];
 
   xdg.enable = true;
